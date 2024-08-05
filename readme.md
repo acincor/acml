@@ -179,13 +179,3 @@ let brain = Brain(nerveTissues: nerveTissues)
 ```
 NSLog(brain.msgs.last?.last ?? "null")
 ```
-    
-    ## Overview
-    
-    A Model about simulate brain
-    
-    ## Topics
-    
-    ### Organ
-    
-        - ``RNA``
