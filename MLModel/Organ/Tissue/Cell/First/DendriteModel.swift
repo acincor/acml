@@ -1,0 +1,45 @@
+//
+//  DendriteModel.swift
+//  MLModel
+//
+//  Created by Monkey hammer on 8/1/24.
+//
+
+class DendriteModel: MessageProtocol {
+    var nerveEnding: NerveEndingModel?
+    var message = String()
+    var expiresDate: Date?
+    var geT: (() -> (Date?))
+    var complete: ((Date?) -> ())
+    init(nerveEnding: NerveEndingModel? = nil, percent: Double? = nil, get: @escaping (() -> (Date?)), complete: @escaping ((Date?) -> ())) throws {
+        self.nerveEnding = nerveEnding
+        self.percent = percent
+        self.geT = get
+        self.complete = complete
+        set()
+    }
+    func receive() {
+        if(Date().timeIntervalSince1970 > (geT() ?? Date()).timeIntervalSince1970) {
+            self.percent = 0
+            self.nerveEnding = nil
+            return
+        }
+        set()
+        message = nerveEnding?.message ?? ""
+    }
+    static func == (lhs: DendriteModel, rhs: DendriteModel) -> Bool {
+        return lhs.nerveEnding == rhs.nerveEnding && lhs.expiresDate == rhs.expiresDate && lhs.percent == rhs.percent
+    }
+    var percent: Double? {
+        didSet {
+            set()
+        }
+    }
+    func set() {
+        expiresDate = Date.now.addingTimeInterval(300*(percent ?? 0))
+        complete(expiresDate)
+    }
+    var description: String {
+        "<FIRST DENDRITE \(self.expiresDate?.description ?? "null")>"
+    }
+}
