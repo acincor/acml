@@ -5,12 +5,12 @@
 //  Created by Monkey hammer on 8/1/24.
 //
 
-class NerveTissue: CustomStringConvertible {
+public class NerveTissue: CustomStringConvertible {
     var neuronCells: [NeuronCell]
-    init(neuronCells: [NeuronCell]) {
+    public init(neuronCells: [NeuronCell]) {
         self.neuronCells = neuronCells
     }
-    func build() {
+    public func build() {
         for neuronCell in neuronCells {
             neuronCell.build()
         }
@@ -22,7 +22,7 @@ class NerveTissue: CustomStringConvertible {
         }
         return messages
     }
-    var description: String {
+    public var description: String {
         "<TISSUE NERVETISSUE \(msgs) \(neuronCells)>"
     }
 }

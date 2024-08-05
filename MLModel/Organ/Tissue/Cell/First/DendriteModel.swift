@@ -5,13 +5,13 @@
 //  Created by Monkey hammer on 8/1/24.
 //
 
-class DendriteModel: MessageProtocol {
-    var nerveEnding: NerveEndingModel?
+public class DendriteModel: MessageProtocol {
+    public var nerveEnding: NerveEndingModel?
     var message = String()
     var expiresDate: Date?
     var geT: (() -> (Date?))
     var complete: ((Date?) -> ())
-    init(nerveEnding: NerveEndingModel? = nil, percent: Double? = nil, get: @escaping (() -> (Date?)), complete: @escaping ((Date?) -> ())) throws {
+    public init(nerveEnding: NerveEndingModel? = nil, percent: Double? = nil, get: @escaping (() -> (Date?)), complete: @escaping ((Date?) -> ())) throws {
         self.nerveEnding = nerveEnding
         self.percent = percent
         self.geT = get
@@ -25,9 +25,10 @@ class DendriteModel: MessageProtocol {
             return
         }
         set()
+        //NSLog("received messages %@", nerveEnding?.message ?? "nil")
         message = nerveEnding?.message ?? ""
     }
-    static func == (lhs: DendriteModel, rhs: DendriteModel) -> Bool {
+    public static func == (lhs: DendriteModel, rhs: DendriteModel) -> Bool {
         return lhs.nerveEnding == rhs.nerveEnding && lhs.expiresDate == rhs.expiresDate && lhs.percent == rhs.percent
     }
     var percent: Double? {
@@ -39,7 +40,7 @@ class DendriteModel: MessageProtocol {
         expiresDate = Date.now.addingTimeInterval(300*(percent ?? 0))
         complete(expiresDate)
     }
-    var description: String {
+    public var description: String {
         "<FIRST DENDRITE \(self.expiresDate?.description ?? "null")>"
     }
 }

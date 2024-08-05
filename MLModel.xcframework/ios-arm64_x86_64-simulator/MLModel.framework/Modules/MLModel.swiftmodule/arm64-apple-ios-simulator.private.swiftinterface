@@ -1,0 +1,101 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.6.8 clang-1600.0.23.1)
+// swift-module-flags: -target arm64-apple-ios18.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name MLModel
+@_exported import MLModel
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class RNAModel : Swift.CustomStringConvertible, Swift.Hashable {
+  public init(id: Swift.Int)
+  public func hash(into hasher: inout Swift.Hasher)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (lhs: MLModel.RNAModel, rhs: MLModel.RNAModel) -> Swift.Bool
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class DNAModel : Swift.CustomStringConvertible, Swift.Hashable {
+  public init(rnas: [MLModel.RNAModel]) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (lhs: MLModel.DNAModel, rhs: MLModel.DNAModel) -> Swift.Bool
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class NucleusModel : Swift.CustomStringConvertible, Swift.Hashable {
+  public init(dnas: [MLModel.DNAModel]) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: MLModel.NucleusModel, rhs: MLModel.NucleusModel) -> Swift.Bool
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class CellBodyModel : Swift.CustomStringConvertible {
+  public init(nucleus: MLModel.NucleusModel) throws
+  public static func == (lhs: MLModel.CellBodyModel, rhs: MLModel.CellBodyModel) -> Swift.Bool
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public class DendriteModel {
+  public var nerveEnding: MLModel.NerveEndingModel?
+  public init(nerveEnding: MLModel.NerveEndingModel? = nil, percent: Swift.Double? = nil, get: @escaping (() -> (Foundation.Date?)), complete: @escaping ((Foundation.Date?) -> ())) throws
+  public static func == (lhs: MLModel.DendriteModel, rhs: MLModel.DendriteModel) -> Swift.Bool
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public class NerveEndingModel {
+  public var dendrite: MLModel.DendriteModel?
+  public init(dendrite: MLModel.DendriteModel? = nil, percent: Swift.Double? = nil, get: @escaping (() -> (Foundation.Date?)), complete: @escaping ((Foundation.Date?) -> ())) throws
+  public static func == (lhs: MLModel.NerveEndingModel, rhs: MLModel.NerveEndingModel) -> Swift.Bool
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public class NeuronCell : Swift.CustomStringConvertible, Swift.Equatable {
+  public var description: Swift.String {
+    get
+  }
+  public static func == (lhs: MLModel.NeuronCell, rhs: MLModel.NeuronCell) -> Swift.Bool
+  public init(cellBody: MLModel.CellBodyModel, dendrites: [MLModel.DendriteModel], nerveEndings: [MLModel.NerveEndingModel], msg: Swift.String)
+  @objc deinit
+}
+public class NerveTissue : Swift.CustomStringConvertible {
+  public init(neuronCells: [MLModel.NeuronCell])
+  public func build()
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public class Brain : Swift.CustomStringConvertible {
+  public init(nerveTissues: [MLModel.NerveTissue])
+  public func build()
+  public var msgs: [[Swift.String]] {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension MLModel.DendriteModel : Swift.Equatable {}
+extension MLModel.DendriteModel : Swift.CustomStringConvertible {}
+extension MLModel.NerveEndingModel : Swift.Equatable {}
+extension MLModel.NerveEndingModel : Swift.CustomStringConvertible {}

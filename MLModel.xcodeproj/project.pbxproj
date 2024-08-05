@@ -6,6 +6,22 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		5873557B2C60BD5B00D7AEFB /* ML */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5873557E2C60BD5B00D7AEFB /* Build configuration list for PBXAggregateTarget "ML" */;
+			buildPhases = (
+				5873557F2C60BD7E00D7AEFB /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = ML;
+			packageProductDependencies = (
+			);
+			productName = ML;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		587354E32C60AC8A00D7AEFB /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 587354E22C60AC8A00D7AEFB /* readme.md */; };
 		58B7EC632C5A8A510016D1D8 /* MLModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B7EC582C5A8A510016D1D8 /* MLModel.framework */; };
@@ -149,6 +165,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					5873557B2C60BD5B00D7AEFB = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					58B7EC572C5A8A510016D1D8 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -172,6 +191,7 @@
 			targets = (
 				58B7EC572C5A8A510016D1D8 /* MLModel */,
 				58B7EC612C5A8A510016D1D8 /* MLModelTests */,
+				5873557B2C60BD5B00D7AEFB /* ML */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +213,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5873557F2C60BD7E00D7AEFB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nSCHEME_NAME=\"${PROJECT_NAME}\"\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\nSIMULATOR_ARCHIVE_PATH=\"${BUILD_DIR}/${CONFIGURATION}/${FRAMEWORK_NAME}-iphonesimulator.xcarchive\"\nDEVICE_ARCHIVE_PATH=\"${BUILD_DIR}/${CONFIGURATION}/${FRAMEWORK_NAME}-iphoneos.xcarchive\"\nOUTPUT_DIC=\"${PROJECT_DIR}\"\n\n\n#Clean\n rm -rf ./archives\n rm -rf \"${OUTPUT_DIC}/${FRAMEWORK_NAME}.xcframework\"\n\n\n# Simulator xcarchieve\nxcodebuild archive \\\n  -scheme ${SCHEME_NAME} \\\n  -archivePath ${SIMULATOR_ARCHIVE_PATH} \\\n  -sdk iphonesimulator \\\n  SKIP_INSTALL=NO \\\n  BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n# Device xcarchieve\nxcodebuild archive \\\n  -scheme ${SCHEME_NAME} \\\n  -archivePath ${DEVICE_ARCHIVE_PATH} \\\n  -sdk iphoneos \\\n  SKIP_INSTALL=NO \\\n  BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n\n# Create xcframwork combine of all frameworks\nxcodebuild -create-xcframework \\\n  -framework ${SIMULATOR_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \\\n  -framework ${DEVICE_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \\\n  -output ${OUTPUT_DIC}/${FRAMEWORK_NAME}.xcframework\n\n#open  OUTPUT_DIC\nopen \"${OUTPUT_DIC}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B7EC542C5A8A510016D1D8 /* Sources */ = {
@@ -220,12 +260,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		5873557C2C60BD5B00D7AEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2AJHF4ZX2;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5873557D2C60BD5B00D7AEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2AJHF4ZX2;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		58B7EC6C2C5A8A510016D1D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P2AJHF4ZX2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -260,6 +321,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P2AJHF4ZX2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -448,6 +510,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5873557E2C60BD5B00D7AEFB /* Build configuration list for PBXAggregateTarget "ML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5873557C2C60BD5B00D7AEFB /* Debug */,
+				5873557D2C60BD5B00D7AEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		58B7EC522C5A8A510016D1D8 /* Build configuration list for PBXProject "MLModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

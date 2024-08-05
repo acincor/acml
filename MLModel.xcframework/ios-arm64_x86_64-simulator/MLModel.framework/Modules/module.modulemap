@@ -1,0 +1,6 @@
+framework module MLModel {
+  umbrella header "MLModel.h"
+  export *
+
+  module * { export * }
+}

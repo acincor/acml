@@ -7,18 +7,18 @@
 func hasDuplicates<T: Hashable>(array: [T]) -> Bool {
     return Set(array).count != array.count
 }
-class RNAModel: CustomStringConvertible, Hashable {
+public class RNAModel: CustomStringConvertible, Hashable {
     var id: Int
-    init(id: Int) {
+    public init(id: Int) {
         self.id = id
     }
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
-    var description: String {
+    public var description: String {
         "<FOURTH RNA \(id)>"
     }
-    static func == (lhs: RNAModel, rhs: RNAModel) -> Bool {
+    public static func == (lhs: RNAModel, rhs: RNAModel) -> Bool {
         return lhs.id == rhs.id
     }
 }

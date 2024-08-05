@@ -23,41 +23,39 @@ class expires {
          */
         //the parameter that name is `dnas` begins defining
         let rnas = [
-                    RNAModel(id: id()),
-                    RNAModel(id: id())
-                    ] // rnas action
+            RNAModel(id: id()),
+            RNAModel(id: id())
+        ] // rnas action
         let dnas = [
             try DNAModel(rnas: rnas)
-                    ] // dnas action
+        ] // dnas action
         let nucleus = try NucleusModel(dnas: dnas) // the incoming parameter of the nucleus is `dnas`
         //the parameter that name is `dnas` begins defining
         let nextRnas = [
-                    RNAModel(id: id()),
-                    RNAModel(id: id())
-                    ] // rnas action
+            RNAModel(id: id()),
+            RNAModel(id: id())
+        ] // rnas action
         let nextDnas = [
             try DNAModel(rnas: nextRnas)
-                    ] // dnas action
+        ] // dnas action
         let nextNucleus = try NucleusModel(dnas: nextDnas) // the incoming parameter of the nucleus is `nextCleus`
         //done.
         //dendrites begin defining
         let dendrites = [
-            try DendriteModel(percent: 1, get: { self.expiresDates[0] }, complete: { date in
-                self.expiresDates.append(date ?? Date())
-            })
-                        ]
+            try DendriteModel(percent: 1, get: { self.expiresDates[0] }, complete: { date in self.expiresDates.append(date ?? Date())})
+        ]
         //next dendrites begin defining
         let nextDendrites = [
             try DendriteModel(percent: 0.4, get: { self.expiresDates[1] }, complete: { date in self.expiresDates.append(date ?? Date()) })
-            ]
+        ]
         //nerve endings begin defining
         let nerveEndings = [
             try NerveEndingModel(dendrite: nextDendrites[0], percent: 0.9,get: { self.expiresDates[2] },complete: {date in self.expiresDates.append(date ?? Date())})
-                            ]
+        ]
         nextDendrites[0].nerveEnding = nerveEndings[0]
         let nextNerveEndings = [
             try NerveEndingModel(percent: 0.3,get: { self.expiresDates[3] }, complete: {date in self.expiresDates.append(date ?? Date())})
-                            ]
+        ]
         //cell body begins defining
         let cellBody = try CellBodyModel(nucleus: nucleus)
         //next cell body begins defining
@@ -66,7 +64,7 @@ class expires {
         let neuronCells = [
             NeuronCell(cellBody: cellBody, dendrites: dendrites, nerveEndings: nerveEndings, msg: "xcode"),
             NeuronCell(cellBody: nextCellBody, dendrites: nextDendrites, nerveEndings: nextNerveEndings, msg: "是一种集成环境式IDE")
-                ]
+        ]
         //neuron tissues begin defining
         let nerveTissues = [NerveTissue(neuronCells: neuronCells)]
         //brain begins defining
@@ -85,7 +83,6 @@ class expires {
         self.ids.append(iden)
         return iden
     }
-    
 }
 struct MLModelTests {
     @Test mutating func example() async throws {

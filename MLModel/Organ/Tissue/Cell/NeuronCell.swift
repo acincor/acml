@@ -4,8 +4,8 @@
 //
 //  Created by Monkey hammer on 8/1/24.
 //
-class NeuronCell: CustomStringConvertible, Equatable {
-    var description: String{
+public class NeuronCell: CustomStringConvertible, Equatable {
+    public var description: String{
         "<CELL NEURONCELL \(msg) \(cellBody) \(dendrites) \(nerveEndings)>"
     }
     var cellBody: CellBodyModel
@@ -22,10 +22,10 @@ class NeuronCell: CustomStringConvertible, Equatable {
             nerveEnding.send()
         }
     }
-    static func == (lhs: NeuronCell, rhs: NeuronCell) -> Bool {
+    public static func == (lhs: NeuronCell, rhs: NeuronCell) -> Bool {
         return lhs.dendrites == rhs.dendrites && lhs.cellBody == rhs.cellBody && lhs.nerveEndings == rhs.nerveEndings && lhs.msg == rhs.msg
     }
-    init(cellBody: CellBodyModel, dendrites: [DendriteModel], nerveEndings: [NerveEndingModel], msg: String) {
+    public init(cellBody: CellBodyModel, dendrites: [DendriteModel], nerveEndings: [NerveEndingModel], msg: String) {
         self.cellBody = cellBody
         self.msg = msg
         self.dendrites = dendrites
