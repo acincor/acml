@@ -15,8 +15,8 @@ public class NerveTissue: CustomStringConvertible {
             neuronCell.build()
         }
     }
-    var msgs: [String] {
-        var messages = [String]()
+    public var msgs: [Any] {
+        var messages = [Any]()
         for neuronCell in neuronCells {
             messages.append(neuronCell.msg)
         }

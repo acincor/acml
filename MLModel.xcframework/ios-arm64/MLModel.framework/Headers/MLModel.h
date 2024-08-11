@@ -14,3 +14,4 @@ FOUNDATION_EXPORT double MLModelVersionNumber;
 FOUNDATION_EXPORT const unsigned char MLModelVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MLModel/PublicHeader.h>
+#import <MLModel/FMDB.h>

@@ -5,41 +5,115 @@
     "printedName": "MLModel",
     "children": [
       {
-        "kind": "TypeDecl",
-        "name": "RNAModel",
-        "printedName": "RNAModel",
+        "kind": "Function",
+        "name": "loadDeploy",
+        "printedName": "loadDeploy()",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(id:)",
+            "kind": "TypeNominal",
+            "name": "Brain",
+            "printedName": "MLModel.Brain",
+            "usr": "s:7MLModel5BrainC"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:7MLModel10loadDeployAA5BrainCyKF",
+        "mangledName": "$s7MLModel10loadDeployAA5BrainCyKF",
+        "moduleName": "MLModel",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "rand",
+        "printedName": "rand(_:_:_:_:_:_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Brain",
+            "printedName": "MLModel.Brain",
+            "usr": "s:7MLModel5BrainC"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Double",
+            "printedName": "Swift.Double",
+            "usr": "s:Sd"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:7MLModel4randyAA5BrainCSd_S3iS2btKF",
+        "mangledName": "$s7MLModel4randyAA5BrainCSd_S3iS2btKF",
+        "moduleName": "MLModel",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DeployDAL",
+        "printedName": "DeployDAL",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "clearDataCache",
+            "printedName": "clearDataCache()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RNAModel",
-                "printedName": "MLModel.RNAModel",
-                "usr": "s:7MLModel8RNAModelC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Void",
+                "printedName": "()"
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:7MLModel8RNAModelC2idACSi_tcfc",
-            "mangledName": "$s7MLModel8RNAModelC2idACSi_tcfc",
+            "declKind": "Func",
+            "usr": "s:7MLModel9DeployDALC14clearDataCacheyyFZ",
+            "mangledName": "$s7MLModel9DeployDALC14clearDataCacheyyFZ",
             "moduleName": "MLModel",
+            "static": true,
             "declAttributes": [
               "AccessControl"
             ],
-            "init_kind": "Designated"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
+            "name": "removeCache",
+            "printedName": "removeCache(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -48,17 +122,913 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7MLModel8RNAModelC4hash4intoys6HasherVz_tF",
-            "mangledName": "$s7MLModel8RNAModelC4hash4intoys6HasherVz_tF",
+            "usr": "s:7MLModel9DeployDALC11removeCacheyySiFZ",
+            "mangledName": "$s7MLModel9DeployDALC11removeCacheyySiFZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "collectCellBody",
+            "printedName": "collectCellBody()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CellBodyModel",
+                "printedName": "MLModel.CellBodyModel",
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7MLModel9DeployDALC15collectCellBodyAA0eF5ModelCyKFZ",
+            "mangledName": "$s7MLModel9DeployDALC15collectCellBodyAA0eF5ModelCyKFZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "loadNewCellBody",
+            "printedName": "loadNewCellBody",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.CellBodyModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CellBodyModel",
+                    "printedName": "MLModel.CellBodyModel",
+                    "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7MLModel9DeployDALC15loadNewCellBodyAA0fG5ModelCSgvpZ",
+            "mangledName": "$s7MLModel9DeployDALC15loadNewCellBodyAA0fG5ModelCSgvpZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MLModel.CellBodyModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CellBodyModel",
+                        "printedName": "MLModel.CellBodyModel",
+                        "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel9DeployDALC15loadNewCellBodyAA0fG5ModelCSgvgZ",
+                "mangledName": "$s7MLModel9DeployDALC15loadNewCellBodyAA0fG5ModelCSgvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "expiresDates",
+            "printedName": "expiresDates",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.Int : Foundation.Date]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvpZ",
+            "mangledName": "$s7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvpZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.Int : Foundation.Date]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvgZ",
+                "mangledName": "$s7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.Int : Foundation.Date]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvsZ",
+                "mangledName": "$s7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvMZ",
+                "mangledName": "$s7MLModel9DeployDALC12expiresDatesSDySi10Foundation4DateVGvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "saveSingleCache",
+            "printedName": "saveSingleCache(array:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7MLModel9DeployDALC15saveSingleCache5arrayySDySSypG_tFZ",
+            "mangledName": "$s7MLModel9DeployDALC15saveSingleCache5arrayySDySSypG_tFZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "saveCache",
+            "printedName": "saveCache(array:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7MLModel9DeployDALC9saveCache5arrayySaySDySSypGG_tFZ",
+            "mangledName": "$s7MLModel9DeployDALC9saveCache5arrayySaySDySSypGG_tFZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadStatus",
+            "printedName": "loadStatus()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MLModel.NeuronCell]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NeuronCell",
+                    "printedName": "MLModel.NeuronCell",
+                    "usr": "c:@M@MLModel@objc(cs)NeuronCell"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7MLModel9DeployDALC10loadStatusSayAA10NeuronCellCGyKFZ",
+            "mangledName": "$s7MLModel9DeployDALC10loadStatusSayAA10NeuronCellCGyKFZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7MLModel9DeployDALC",
+        "mangledName": "$s7MLModel9DeployDALC",
+        "moduleName": "MLModel",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Deploy",
+        "printedName": "Deploy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(cpy)supportsSecureCoding",
+            "mangledName": "$s7MLModel6DeployC20supportsSecureCodingSbvpZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)Deploy(cm)supportsSecureCoding",
+                "mangledName": "$s7MLModel6DeployC20supportsSecureCodingSbvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)Deploy(cm)setSupportsSecureCoding:",
+                "mangledName": "$s7MLModel6DeployC20supportsSecureCodingSbvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel6DeployC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s7MLModel6DeployC20supportsSecureCodingSbvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nerveEnding",
+            "printedName": "nerveEnding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.NerveEndingModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NerveEndingModel",
+                    "printedName": "MLModel.NerveEndingModel",
+                    "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(py)nerveEnding",
+            "mangledName": "$s7MLModel6DeployC11nerveEndingAA05NerveD5ModelCSgvp",
             "moduleName": "MLModel",
             "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MLModel.NerveEndingModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NerveEndingModel",
+                        "printedName": "MLModel.NerveEndingModel",
+                        "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)Deploy(im)nerveEnding",
+                "mangledName": "$s7MLModel6DeployC11nerveEndingAA05NerveD5ModelCSgvg",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MLModel.NerveEndingModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NerveEndingModel",
+                        "printedName": "MLModel.NerveEndingModel",
+                        "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)Deploy(im)setNerveEnding:",
+                "mangledName": "$s7MLModel6DeployC11nerveEndingAA05NerveD5ModelCSgvs",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel6DeployC11nerveEndingAA05NerveD5ModelCSgvM",
+                "mangledName": "$s7MLModel6DeployC11nerveEndingAA05NerveD5ModelCSgvM",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dendrite",
+            "printedName": "dendrite",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.DendriteModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DendriteModel",
+                    "printedName": "MLModel.DendriteModel",
+                    "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(py)dendrite",
+            "mangledName": "$s7MLModel6DeployC8dendriteAA13DendriteModelCSgvp",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MLModel.DendriteModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DendriteModel",
+                        "printedName": "MLModel.DendriteModel",
+                        "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)Deploy(im)dendrite",
+                "mangledName": "$s7MLModel6DeployC8dendriteAA13DendriteModelCSgvg",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MLModel.DendriteModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DendriteModel",
+                        "printedName": "MLModel.DendriteModel",
+                        "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)Deploy(im)setDendrite:",
+                "mangledName": "$s7MLModel6DeployC8dendriteAA13DendriteModelCSgvs",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel6DeployC8dendriteAA13DendriteModelCSgvM",
+                "mangledName": "$s7MLModel6DeployC8dendriteAA13DendriteModelCSgvM",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(dict:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Deploy",
+                "printedName": "MLModel.Deploy",
+                "usr": "c:@M@MLModel@objc(cs)Deploy"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7MLModel6DeployC4dictACSDySSypG_tcfc",
+            "mangledName": "$s7MLModel6DeployC4dictACSDySSypG_tcfc",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Deploy",
+                "printedName": "MLModel.Deploy",
+                "usr": "c:@M@MLModel@objc(cs)Deploy"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Deploy",
+                "printedName": "MLModel.Deploy",
+                "usr": "c:@M@MLModel@objc(cs)Deploy"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7MLModel6DeployC2eeoiySbAC_ACtFZ",
+            "mangledName": "$s7MLModel6DeployC2eeoiySbAC_ACtFZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Deploy",
+                "printedName": "MLModel.Deploy",
+                "usr": "c:@M@MLModel@objc(cs)Deploy"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(im)initWithCoder:",
+            "mangledName": "$s7MLModel6DeployC5coderACSo7NSCoderC_tcfc",
+            "moduleName": "MLModel",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(im)encodeWithCoder:",
+            "mangledName": "$s7MLModel6DeployC6encode4withySo7NSCoderC_tF",
+            "moduleName": "MLModel",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setValue",
+            "printedName": "setValue(_:forUndefinedKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(im)setValue:forUndefinedKey:",
+            "mangledName": "$s7MLModel6DeployC8setValue_15forUndefinedKeyyypSg_SStF",
+            "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "setValue:forUndefinedKey:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -76,10 +1046,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel8RNAModelC11descriptionSSvp",
-            "mangledName": "$s7MLModel8RNAModelC11descriptionSSvp",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(py)description",
+            "mangledName": "$s7MLModel6DeployC11descriptionSSvp",
             "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "description",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "accessors": [
@@ -96,94 +1071,58 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel8RNAModelC11descriptionSSvg",
-                "mangledName": "$s7MLModel8RNAModelC11descriptionSSvg",
+                "usr": "c:@M@MLModel@objc(cs)Deploy(im)description",
+                "mangledName": "$s7MLModel6DeployC11descriptionSSvg",
                 "moduleName": "MLModel",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "RNAModel",
-                "printedName": "MLModel.RNAModel",
-                "usr": "s:7MLModel8RNAModelC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "RNAModel",
-                "printedName": "MLModel.RNAModel",
-                "usr": "s:7MLModel8RNAModelC"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7MLModel8RNAModelC2eeoiySbAC_ACtFZ",
-            "mangledName": "$s7MLModel8RNAModelC2eeoiySbAC_ACtFZ",
-            "moduleName": "MLModel",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7MLModel8RNAModelC9hashValueSivp",
-            "mangledName": "$s7MLModel8RNAModelC9hashValueSivp",
-            "moduleName": "MLModel",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
                 ],
-                "declKind": "Accessor",
-                "usr": "s:7MLModel8RNAModelC9hashValueSivg",
-                "mangledName": "$s7MLModel8RNAModelC9hashValueSivg",
-                "moduleName": "MLModel",
-                "implicit": true,
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Deploy",
+                "printedName": "MLModel.Deploy",
+                "usr": "c:@M@MLModel@objc(cs)Deploy"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)Deploy(im)init",
+            "mangledName": "$s7MLModel6DeployCACycfc",
+            "moduleName": "MLModel",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7MLModel8RNAModelC",
-        "mangledName": "$s7MLModel8RNAModelC",
+        "usr": "c:@M@MLModel@objc(cs)Deploy",
+        "mangledName": "$s7MLModel6DeployC",
         "moduleName": "MLModel",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -202,10 +1141,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -216,10 +1155,38 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -229,45 +1196,114 @@
         "printedName": "DNAModel",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rnas:)",
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "DNAModel",
-                "printedName": "MLModel.DNAModel",
-                "usr": "s:7MLModel8DNAModelC"
-              },
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)DNAModel(cpy)supportsSecureCoding",
+            "mangledName": "$s7MLModel8DNAModelC20supportsSecureCodingSbvpZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
               {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[MLModel.RNAModel]",
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RNAModel",
-                    "printedName": "MLModel.RNAModel",
-                    "usr": "s:7MLModel8RNAModelC"
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
                   }
                 ],
-                "usr": "s:Sa"
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)DNAModel(cm)supportsSecureCoding",
+                "mangledName": "$s7MLModel8DNAModelC20supportsSecureCodingSbvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)DNAModel(cm)setSupportsSecureCoding:",
+                "mangledName": "$s7MLModel8DNAModelC20supportsSecureCodingSbvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel8DNAModelC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s7MLModel8DNAModelC20supportsSecureCodingSbvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
               }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:7MLModel8DNAModelC4rnasACSayAA8RNAModelCG_tKcfc",
-            "mangledName": "$s7MLModel8DNAModelC4rnasACSayAA8RNAModelCG_tKcfc",
-            "moduleName": "MLModel",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "throwing": true,
-            "init_kind": "Designated"
+            ]
           },
           {
             "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
+            "name": "encode",
+            "printedName": "encode(with:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -276,20 +1312,95 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7MLModel8DNAModelC4hash4intoys6HasherVz_tF",
-            "mangledName": "$s7MLModel8DNAModelC4hash4intoys6HasherVz_tF",
+            "usr": "c:@M@MLModel@objc(cs)DNAModel(im)encodeWithCoder:",
+            "mangledName": "$s7MLModel8DNAModelC6encode4withySo7NSCoderC_tF",
+            "moduleName": "MLModel",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.DNAModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DNAModel",
+                    "printedName": "MLModel.DNAModel",
+                    "usr": "c:@M@MLModel@objc(cs)DNAModel"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)DNAModel(im)initWithCoder:",
+            "mangledName": "$s7MLModel8DNAModelC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "MLModel",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rnaId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DNAModel",
+                "printedName": "MLModel.DNAModel",
+                "usr": "c:@M@MLModel@objc(cs)DNAModel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Int]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7MLModel8DNAModelC5rnaIdACSaySiG_tKcfc",
+            "mangledName": "$s7MLModel8DNAModelC5rnaIdACSaySiG_tKcfc",
             "moduleName": "MLModel",
             "declAttributes": [
               "AccessControl"
             ],
-            "funcSelfKind": "NonMutating"
+            "throwing": true,
+            "init_kind": "Designated"
           },
           {
             "kind": "Var",
@@ -304,10 +1415,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel8DNAModelC11descriptionSSvp",
+            "usr": "c:@M@MLModel@objc(cs)DNAModel(py)description",
             "mangledName": "$s7MLModel8DNAModelC11descriptionSSvp",
             "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "description",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "accessors": [
@@ -324,9 +1440,15 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel8DNAModelC11descriptionSSvg",
+                "usr": "c:@M@MLModel@objc(cs)DNAModel(im)description",
                 "mangledName": "$s7MLModel8DNAModelC11descriptionSSvg",
                 "moduleName": "MLModel",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -346,13 +1468,13 @@
                 "kind": "TypeNominal",
                 "name": "DNAModel",
                 "printedName": "MLModel.DNAModel",
-                "usr": "s:7MLModel8DNAModelC"
+                "usr": "c:@M@MLModel@objc(cs)DNAModel"
               },
               {
                 "kind": "TypeNominal",
                 "name": "DNAModel",
                 "printedName": "MLModel.DNAModel",
-                "usr": "s:7MLModel8DNAModelC"
+                "usr": "c:@M@MLModel@objc(cs)DNAModel"
               }
             ],
             "declKind": "Func",
@@ -367,52 +1489,44 @@
             "funcSelfKind": "NonMutating"
           },
           {
-            "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "DNAModel",
+                "printedName": "MLModel.DNAModel",
+                "usr": "c:@M@MLModel@objc(cs)DNAModel"
               }
             ],
-            "declKind": "Var",
-            "usr": "s:7MLModel8DNAModelC9hashValueSivp",
-            "mangledName": "$s7MLModel8DNAModelC9hashValueSivp",
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)DNAModel(im)init",
+            "mangledName": "$s7MLModel8DNAModelCACycfc",
             "moduleName": "MLModel",
+            "overriding": true,
             "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MLModel8DNAModelC9hashValueSivg",
-                "mangledName": "$s7MLModel8DNAModelC9hashValueSivg",
-                "moduleName": "MLModel",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7MLModel8DNAModelC",
+        "usr": "c:@M@MLModel@objc(cs)DNAModel",
         "mangledName": "$s7MLModel8DNAModelC",
         "moduleName": "MLModel",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -431,10 +1545,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -445,10 +1559,38 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -458,6 +1600,177 @@
         "printedName": "NucleusModel",
         "children": [
           {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)NucleusModel(cpy)supportsSecureCoding",
+            "mangledName": "$s7MLModel12NucleusModelC20supportsSecureCodingSbvpZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel(cm)supportsSecureCoding",
+                "mangledName": "$s7MLModel12NucleusModelC20supportsSecureCodingSbvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel(cm)setSupportsSecureCoding:",
+                "mangledName": "$s7MLModel12NucleusModelC20supportsSecureCodingSbvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel12NucleusModelC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s7MLModel12NucleusModelC20supportsSecureCodingSbvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MLModel@objc(cs)NucleusModel(im)encodeWithCoder:",
+            "mangledName": "$s7MLModel12NucleusModelC6encode4withySo7NSCoderC_tF",
+            "moduleName": "MLModel",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.NucleusModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NucleusModel",
+                    "printedName": "MLModel.NucleusModel",
+                    "usr": "c:@M@MLModel@objc(cs)NucleusModel"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)NucleusModel(im)initWithCoder:",
+            "mangledName": "$s7MLModel12NucleusModelC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "MLModel",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(dnas:)",
@@ -466,7 +1779,7 @@
                 "kind": "TypeNominal",
                 "name": "NucleusModel",
                 "printedName": "MLModel.NucleusModel",
-                "usr": "s:7MLModel12NucleusModelC"
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel"
               },
               {
                 "kind": "TypeNominal",
@@ -477,7 +1790,7 @@
                     "kind": "TypeNominal",
                     "name": "DNAModel",
                     "printedName": "MLModel.DNAModel",
-                    "usr": "s:7MLModel8DNAModelC"
+                    "usr": "c:@M@MLModel@objc(cs)DNAModel"
                   }
                 ],
                 "usr": "s:Sa"
@@ -495,33 +1808,6 @@
           },
           {
             "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7MLModel12NucleusModelC4hash4intoys6HasherVz_tF",
-            "mangledName": "$s7MLModel12NucleusModelC4hash4intoys6HasherVz_tF",
-            "moduleName": "MLModel",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
             "children": [
@@ -535,13 +1821,13 @@
                 "kind": "TypeNominal",
                 "name": "NucleusModel",
                 "printedName": "MLModel.NucleusModel",
-                "usr": "s:7MLModel12NucleusModelC"
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel"
               },
               {
                 "kind": "TypeNominal",
                 "name": "NucleusModel",
                 "printedName": "MLModel.NucleusModel",
-                "usr": "s:7MLModel12NucleusModelC"
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel"
               }
             ],
             "declKind": "Func",
@@ -568,10 +1854,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel12NucleusModelC11descriptionSSvp",
+            "usr": "c:@M@MLModel@objc(cs)NucleusModel(py)description",
             "mangledName": "$s7MLModel12NucleusModelC11descriptionSSvp",
             "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "description",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "accessors": [
@@ -588,60 +1879,58 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel12NucleusModelC11descriptionSSvg",
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel(im)description",
                 "mangledName": "$s7MLModel12NucleusModelC11descriptionSSvg",
                 "moduleName": "MLModel",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
           },
           {
-            "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "NucleusModel",
+                "printedName": "MLModel.NucleusModel",
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel"
               }
             ],
-            "declKind": "Var",
-            "usr": "s:7MLModel12NucleusModelC9hashValueSivp",
-            "mangledName": "$s7MLModel12NucleusModelC9hashValueSivp",
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)NucleusModel(im)init",
+            "mangledName": "$s7MLModel12NucleusModelCACycfc",
             "moduleName": "MLModel",
+            "overriding": true,
             "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MLModel12NucleusModelC9hashValueSivg",
-                "mangledName": "$s7MLModel12NucleusModelC9hashValueSivg",
-                "moduleName": "MLModel",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7MLModel12NucleusModelC",
+        "usr": "c:@M@MLModel@objc(cs)NucleusModel",
         "mangledName": "$s7MLModel12NucleusModelC",
         "moduleName": "MLModel",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -660,10 +1949,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -674,10 +1963,38 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -687,6 +2004,177 @@
         "printedName": "CellBodyModel",
         "children": [
           {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)CellBodyModel(cpy)supportsSecureCoding",
+            "mangledName": "$s7MLModel13CellBodyModelC20supportsSecureCodingSbvpZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel(cm)supportsSecureCoding",
+                "mangledName": "$s7MLModel13CellBodyModelC20supportsSecureCodingSbvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel(cm)setSupportsSecureCoding:",
+                "mangledName": "$s7MLModel13CellBodyModelC20supportsSecureCodingSbvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel13CellBodyModelC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s7MLModel13CellBodyModelC20supportsSecureCodingSbvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MLModel@objc(cs)CellBodyModel(im)encodeWithCoder:",
+            "mangledName": "$s7MLModel13CellBodyModelC6encode4withySo7NSCoderC_tF",
+            "moduleName": "MLModel",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.CellBodyModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CellBodyModel",
+                    "printedName": "MLModel.CellBodyModel",
+                    "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)CellBodyModel(im)initWithCoder:",
+            "mangledName": "$s7MLModel13CellBodyModelC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "MLModel",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(nucleus:)",
@@ -695,23 +2183,22 @@
                 "kind": "TypeNominal",
                 "name": "CellBodyModel",
                 "printedName": "MLModel.CellBodyModel",
-                "usr": "s:7MLModel13CellBodyModelC"
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
               },
               {
                 "kind": "TypeNominal",
                 "name": "NucleusModel",
                 "printedName": "MLModel.NucleusModel",
-                "usr": "s:7MLModel12NucleusModelC"
+                "usr": "c:@M@MLModel@objc(cs)NucleusModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7MLModel13CellBodyModelC7nucleusAcA07NucleusD0C_tKcfc",
-            "mangledName": "$s7MLModel13CellBodyModelC7nucleusAcA07NucleusD0C_tKcfc",
+            "usr": "s:7MLModel13CellBodyModelC7nucleusAcA07NucleusD0C_tcfc",
+            "mangledName": "$s7MLModel13CellBodyModelC7nucleusAcA07NucleusD0C_tcfc",
             "moduleName": "MLModel",
             "declAttributes": [
               "AccessControl"
             ],
-            "throwing": true,
             "init_kind": "Designated"
           },
           {
@@ -729,13 +2216,13 @@
                 "kind": "TypeNominal",
                 "name": "CellBodyModel",
                 "printedName": "MLModel.CellBodyModel",
-                "usr": "s:7MLModel13CellBodyModelC"
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
               },
               {
                 "kind": "TypeNominal",
                 "name": "CellBodyModel",
                 "printedName": "MLModel.CellBodyModel",
-                "usr": "s:7MLModel13CellBodyModelC"
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
               }
             ],
             "declKind": "Func",
@@ -762,10 +2249,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel13CellBodyModelC11descriptionSSvp",
+            "usr": "c:@M@MLModel@objc(cs)CellBodyModel(py)description",
             "mangledName": "$s7MLModel13CellBodyModelC11descriptionSSvp",
             "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "description",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "accessors": [
@@ -782,21 +2274,58 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel13CellBodyModelC11descriptionSSvg",
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel(im)description",
                 "mangledName": "$s7MLModel13CellBodyModelC11descriptionSSvg",
                 "moduleName": "MLModel",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CellBodyModel",
+                "printedName": "MLModel.CellBodyModel",
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)CellBodyModel(im)init",
+            "mangledName": "$s7MLModel13CellBodyModelCACycfc",
+            "moduleName": "MLModel",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7MLModel13CellBodyModelC",
+        "usr": "c:@M@MLModel@objc(cs)CellBodyModel",
         "mangledName": "$s7MLModel13CellBodyModelC",
         "moduleName": "MLModel",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -815,10 +2344,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CustomStringConvertible",
             "printedName": "CustomStringConvertible",
             "usr": "s:s23CustomStringConvertibleP",
             "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -829,30 +2400,26 @@
         "children": [
           {
             "kind": "Var",
-            "name": "nerveEnding",
-            "printedName": "nerveEnding",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MLModel.NerveEndingModel?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NerveEndingModel",
-                    "printedName": "MLModel.NerveEndingModel",
-                    "usr": "s:7MLModel16NerveEndingModelC"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvp",
-            "mangledName": "$s7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvp",
+            "usr": "c:@M@MLModel@objc(cs)DendriteModel(cpy)supportsSecureCoding",
+            "mangledName": "$s7MLModel13DendriteModelC20supportsSecureCodingSbvpZ",
             "moduleName": "MLModel",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
+              "ObjC",
               "HasStorage",
               "AccessControl"
             ],
@@ -865,24 +2432,195 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel(cm)supportsSecureCoding",
+                "mangledName": "$s7MLModel13DendriteModelC20supportsSecureCodingSbvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel(cm)setSupportsSecureCoding:",
+                "mangledName": "$s7MLModel13DendriteModelC20supportsSecureCodingSbvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel13DendriteModelC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s7MLModel13DendriteModelC20supportsSecureCodingSbvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DendriteModel",
+                "printedName": "MLModel.DendriteModel",
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)DendriteModel(im)initWithCoder:",
+            "mangledName": "$s7MLModel13DendriteModelC5coderACSo7NSCoderC_tcfc",
+            "moduleName": "MLModel",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MLModel@objc(cs)DendriteModel(im)encodeWithCoder:",
+            "mangledName": "$s7MLModel13DendriteModelC6encode4withySo7NSCoderC_tF",
+            "moduleName": "MLModel",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "deploy",
+            "printedName": "deploy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.Deploy?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Deploy",
+                    "printedName": "MLModel.Deploy",
+                    "usr": "c:@M@MLModel@objc(cs)Deploy"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)DendriteModel(py)deploy",
+            "mangledName": "$s7MLModel13DendriteModelC6deployAA6DeployCSgvp",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "MLModel.NerveEndingModel?",
+                    "printedName": "MLModel.Deploy?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "NerveEndingModel",
-                        "printedName": "MLModel.NerveEndingModel",
-                        "usr": "s:7MLModel16NerveEndingModelC"
+                        "name": "Deploy",
+                        "printedName": "MLModel.Deploy",
+                        "usr": "c:@M@MLModel@objc(cs)Deploy"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvg",
-                "mangledName": "$s7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvg",
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel(im)deploy",
+                "mangledName": "$s7MLModel13DendriteModelC6deployAA6DeployCSgvg",
                 "moduleName": "MLModel",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -898,23 +2636,26 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "MLModel.NerveEndingModel?",
+                    "printedName": "MLModel.Deploy?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "NerveEndingModel",
-                        "printedName": "MLModel.NerveEndingModel",
-                        "usr": "s:7MLModel16NerveEndingModelC"
+                        "name": "Deploy",
+                        "printedName": "MLModel.Deploy",
+                        "usr": "c:@M@MLModel@objc(cs)Deploy"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvs",
-                "mangledName": "$s7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvs",
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel(im)setDeploy:",
+                "mangledName": "$s7MLModel13DendriteModelC6deployAA6DeployCSgvs",
                 "moduleName": "MLModel",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -929,8 +2670,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvM",
-                "mangledName": "$s7MLModel13DendriteModelC11nerveEndingAA05NerveeC0CSgvM",
+                "usr": "s:7MLModel13DendriteModelC6deployAA6DeployCSgvM",
+                "mangledName": "$s7MLModel13DendriteModelC6deployAA6DeployCSgvM",
                 "moduleName": "MLModel",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -940,105 +2681,44 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(nerveEnding:percent:get:complete:)",
+            "printedName": "init(percent:deploy:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "DendriteModel",
                 "printedName": "MLModel.DendriteModel",
-                "usr": "s:7MLModel13DendriteModelC"
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "MLModel.NerveEndingModel?",
+                "printedName": "MLModel.Deploy?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NerveEndingModel",
-                    "printedName": "MLModel.NerveEndingModel",
-                    "usr": "s:7MLModel16NerveEndingModelC"
+                    "name": "Deploy",
+                    "printedName": "MLModel.Deploy",
+                    "usr": "c:@M@MLModel@objc(cs)Deploy"
                   }
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Double?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> Foundation.Date?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Foundation.Date?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7MLModel13DendriteModelC11nerveEnding7percent3get8completeAcA05NerveeC0CSg_SdSg10Foundation4DateVSgycyAOctKcfc",
-            "mangledName": "$s7MLModel13DendriteModelC11nerveEnding7percent3get8completeAcA05NerveeC0CSg_SdSg10Foundation4DateVSgycyAOctKcfc",
+            "usr": "s:7MLModel13DendriteModelC7percent6deployACSd_AA6DeployCSgtcfc",
+            "mangledName": "$s7MLModel13DendriteModelC7percent6deployACSd_AA6DeployCSgtcfc",
             "moduleName": "MLModel",
             "declAttributes": [
               "AccessControl"
             ],
-            "throwing": true,
             "init_kind": "Designated"
           },
           {
@@ -1056,13 +2736,13 @@
                 "kind": "TypeNominal",
                 "name": "DendriteModel",
                 "printedName": "MLModel.DendriteModel",
-                "usr": "s:7MLModel13DendriteModelC"
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel"
               },
               {
                 "kind": "TypeNominal",
                 "name": "DendriteModel",
                 "printedName": "MLModel.DendriteModel",
-                "usr": "s:7MLModel13DendriteModelC"
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel"
               }
             ],
             "declKind": "Func",
@@ -1089,10 +2769,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel13DendriteModelC11descriptionSSvp",
+            "usr": "c:@M@MLModel@objc(cs)DendriteModel(py)description",
             "mangledName": "$s7MLModel13DendriteModelC11descriptionSSvp",
             "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "description",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "accessors": [
@@ -1109,21 +2794,58 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel13DendriteModelC11descriptionSSvg",
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel(im)description",
                 "mangledName": "$s7MLModel13DendriteModelC11descriptionSSvg",
                 "moduleName": "MLModel",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DendriteModel",
+                "printedName": "MLModel.DendriteModel",
+                "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)DendriteModel(im)init",
+            "mangledName": "$s7MLModel13DendriteModelCACycfc",
+            "moduleName": "MLModel",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7MLModel13DendriteModelC",
+        "usr": "c:@M@MLModel@objc(cs)DendriteModel",
         "mangledName": "$s7MLModel13DendriteModelC",
         "moduleName": "MLModel",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -1142,6 +2864,41 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CustomStringConvertible",
             "printedName": "CustomStringConvertible",
             "usr": "s:s23CustomStringConvertibleP",
@@ -1149,10 +2906,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -1163,30 +2920,26 @@
         "children": [
           {
             "kind": "Var",
-            "name": "dendrite",
-            "printedName": "dendrite",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MLModel.DendriteModel?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DendriteModel",
-                    "printedName": "MLModel.DendriteModel",
-                    "usr": "s:7MLModel13DendriteModelC"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvp",
-            "mangledName": "$s7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvp",
+            "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(cpy)supportsSecureCoding",
+            "mangledName": "$s7MLModel16NerveEndingModelC20supportsSecureCodingSbvpZ",
             "moduleName": "MLModel",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
+              "ObjC",
               "HasStorage",
               "AccessControl"
             ],
@@ -1199,24 +2952,195 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(cm)supportsSecureCoding",
+                "mangledName": "$s7MLModel16NerveEndingModelC20supportsSecureCodingSbvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(cm)setSupportsSecureCoding:",
+                "mangledName": "$s7MLModel16NerveEndingModelC20supportsSecureCodingSbvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel16NerveEndingModelC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s7MLModel16NerveEndingModelC20supportsSecureCodingSbvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NerveEndingModel",
+                "printedName": "MLModel.NerveEndingModel",
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(im)initWithCoder:",
+            "mangledName": "$s7MLModel16NerveEndingModelC5coderACSo7NSCoderC_tcfc",
+            "moduleName": "MLModel",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(im)encodeWithCoder:",
+            "mangledName": "$s7MLModel16NerveEndingModelC6encode4withySo7NSCoderC_tF",
+            "moduleName": "MLModel",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "deploy",
+            "printedName": "deploy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.Deploy?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Deploy",
+                    "printedName": "MLModel.Deploy",
+                    "usr": "c:@M@MLModel@objc(cs)Deploy"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(py)deploy",
+            "mangledName": "$s7MLModel16NerveEndingModelC6deployAA6DeployCSgvp",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "MLModel.DendriteModel?",
+                    "printedName": "MLModel.Deploy?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "DendriteModel",
-                        "printedName": "MLModel.DendriteModel",
-                        "usr": "s:7MLModel13DendriteModelC"
+                        "name": "Deploy",
+                        "printedName": "MLModel.Deploy",
+                        "usr": "c:@M@MLModel@objc(cs)Deploy"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvg",
-                "mangledName": "$s7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvg",
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(im)deploy",
+                "mangledName": "$s7MLModel16NerveEndingModelC6deployAA6DeployCSgvg",
                 "moduleName": "MLModel",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -1232,23 +3156,26 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "MLModel.DendriteModel?",
+                    "printedName": "MLModel.Deploy?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "DendriteModel",
-                        "printedName": "MLModel.DendriteModel",
-                        "usr": "s:7MLModel13DendriteModelC"
+                        "name": "Deploy",
+                        "printedName": "MLModel.Deploy",
+                        "usr": "c:@M@MLModel@objc(cs)Deploy"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvs",
-                "mangledName": "$s7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvs",
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(im)setDeploy:",
+                "mangledName": "$s7MLModel16NerveEndingModelC6deployAA6DeployCSgvs",
                 "moduleName": "MLModel",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -1263,8 +3190,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvM",
-                "mangledName": "$s7MLModel16NerveEndingModelC8dendriteAA08DendriteD0CSgvM",
+                "usr": "s:7MLModel16NerveEndingModelC6deployAA6DeployCSgvM",
+                "mangledName": "$s7MLModel16NerveEndingModelC6deployAA6DeployCSgvM",
                 "moduleName": "MLModel",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -1274,105 +3201,44 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(dendrite:percent:get:complete:)",
+            "printedName": "init(percent:deploy:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "NerveEndingModel",
                 "printedName": "MLModel.NerveEndingModel",
-                "usr": "s:7MLModel16NerveEndingModelC"
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "MLModel.DendriteModel?",
+                "printedName": "MLModel.Deploy?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "DendriteModel",
-                    "printedName": "MLModel.DendriteModel",
-                    "usr": "s:7MLModel13DendriteModelC"
+                    "name": "Deploy",
+                    "printedName": "MLModel.Deploy",
+                    "usr": "c:@M@MLModel@objc(cs)Deploy"
                   }
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Double?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> Foundation.Date?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Foundation.Date?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Date?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Date",
-                        "printedName": "Foundation.Date",
-                        "usr": "s:10Foundation4DateV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7MLModel16NerveEndingModelC8dendrite7percent3get8completeAcA08DendriteD0CSg_SdSg10Foundation4DateVSgycyAOctKcfc",
-            "mangledName": "$s7MLModel16NerveEndingModelC8dendrite7percent3get8completeAcA08DendriteD0CSg_SdSg10Foundation4DateVSgycyAOctKcfc",
+            "usr": "s:7MLModel16NerveEndingModelC7percent6deployACSd_AA6DeployCSgtcfc",
+            "mangledName": "$s7MLModel16NerveEndingModelC7percent6deployACSd_AA6DeployCSgtcfc",
             "moduleName": "MLModel",
             "declAttributes": [
               "AccessControl"
             ],
-            "throwing": true,
             "init_kind": "Designated"
           },
           {
@@ -1390,13 +3256,13 @@
                 "kind": "TypeNominal",
                 "name": "NerveEndingModel",
                 "printedName": "MLModel.NerveEndingModel",
-                "usr": "s:7MLModel16NerveEndingModelC"
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
               },
               {
                 "kind": "TypeNominal",
                 "name": "NerveEndingModel",
                 "printedName": "MLModel.NerveEndingModel",
-                "usr": "s:7MLModel16NerveEndingModelC"
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
               }
             ],
             "declKind": "Func",
@@ -1423,10 +3289,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel16NerveEndingModelC11descriptionSSvp",
+            "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(py)description",
             "mangledName": "$s7MLModel16NerveEndingModelC11descriptionSSvp",
             "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "description",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "accessors": [
@@ -1443,21 +3314,58 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel16NerveEndingModelC11descriptionSSvg",
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(im)description",
                 "mangledName": "$s7MLModel16NerveEndingModelC11descriptionSSvg",
                 "moduleName": "MLModel",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NerveEndingModel",
+                "printedName": "MLModel.NerveEndingModel",
+                "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)NerveEndingModel(im)init",
+            "mangledName": "$s7MLModel16NerveEndingModelCACycfc",
+            "moduleName": "MLModel",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7MLModel16NerveEndingModelC",
+        "usr": "c:@M@MLModel@objc(cs)NerveEndingModel",
         "mangledName": "$s7MLModel16NerveEndingModelC",
         "moduleName": "MLModel",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -1476,6 +3384,41 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CustomStringConvertible",
             "printedName": "CustomStringConvertible",
             "usr": "s:s23CustomStringConvertibleP",
@@ -1483,10 +3426,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -1495,6 +3438,177 @@
         "name": "NeuronCell",
         "printedName": "NeuronCell",
         "children": [
+          {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MLModel@objc(cs)NeuronCell(cpy)supportsSecureCoding",
+            "mangledName": "$s7MLModel10NeuronCellC20supportsSecureCodingSbvpZ",
+            "moduleName": "MLModel",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)NeuronCell(cm)supportsSecureCoding",
+                "mangledName": "$s7MLModel10NeuronCellC20supportsSecureCodingSbvgZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MLModel@objc(cs)NeuronCell(cm)setSupportsSecureCoding:",
+                "mangledName": "$s7MLModel10NeuronCellC20supportsSecureCodingSbvsZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel10NeuronCellC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s7MLModel10NeuronCellC20supportsSecureCodingSbvMZ",
+                "moduleName": "MLModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MLModel@objc(cs)NeuronCell(im)encodeWithCoder:",
+            "mangledName": "$s7MLModel10NeuronCellC6encode4withySo7NSCoderC_tF",
+            "moduleName": "MLModel",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MLModel.NeuronCell?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NeuronCell",
+                    "printedName": "MLModel.NeuronCell",
+                    "usr": "c:@M@MLModel@objc(cs)NeuronCell"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)NeuronCell(im)initWithCoder:",
+            "mangledName": "$s7MLModel10NeuronCellC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "MLModel",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
           {
             "kind": "Var",
             "name": "description",
@@ -1508,10 +3622,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel10NeuronCellC11descriptionSSvp",
+            "usr": "c:@M@MLModel@objc(cs)NeuronCell(py)description",
             "mangledName": "$s7MLModel10NeuronCellC11descriptionSSvp",
             "moduleName": "MLModel",
+            "overriding": true,
+            "objc_name": "description",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "accessors": [
@@ -1528,12 +3647,256 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel10NeuronCellC11descriptionSSvg",
+                "usr": "c:@M@MLModel@objc(cs)NeuronCell(im)description",
                 "mangledName": "$s7MLModel10NeuronCellC11descriptionSSvg",
                 "moduleName": "MLModel",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "dendrites",
+            "printedName": "dendrites",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MLModel.DendriteModel]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DendriteModel",
+                    "printedName": "MLModel.DendriteModel",
+                    "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvp",
+            "mangledName": "$s7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvp",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MLModel.DendriteModel]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DendriteModel",
+                        "printedName": "MLModel.DendriteModel",
+                        "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvg",
+                "mangledName": "$s7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvg",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MLModel.DendriteModel]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DendriteModel",
+                        "printedName": "MLModel.DendriteModel",
+                        "usr": "c:@M@MLModel@objc(cs)DendriteModel"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvs",
+                "mangledName": "$s7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvs",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvM",
+                "mangledName": "$s7MLModel10NeuronCellC9dendritesSayAA13DendriteModelCGvM",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nerveEndings",
+            "printedName": "nerveEndings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MLModel.NerveEndingModel]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NerveEndingModel",
+                    "printedName": "MLModel.NerveEndingModel",
+                    "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvp",
+            "mangledName": "$s7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvp",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MLModel.NerveEndingModel]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NerveEndingModel",
+                        "printedName": "MLModel.NerveEndingModel",
+                        "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvg",
+                "mangledName": "$s7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvg",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MLModel.NerveEndingModel]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NerveEndingModel",
+                        "printedName": "MLModel.NerveEndingModel",
+                        "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvs",
+                "mangledName": "$s7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvs",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvM",
+                "mangledName": "$s7MLModel10NeuronCellC12nerveEndingsSayAA16NerveEndingModelCGvM",
+                "moduleName": "MLModel",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "build",
+            "printedName": "build()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7MLModel10NeuronCellC5buildyyF",
+            "mangledName": "$s7MLModel10NeuronCellC5buildyyF",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -1550,13 +3913,13 @@
                 "kind": "TypeNominal",
                 "name": "NeuronCell",
                 "printedName": "MLModel.NeuronCell",
-                "usr": "s:7MLModel10NeuronCellC"
+                "usr": "c:@M@MLModel@objc(cs)NeuronCell"
               },
               {
                 "kind": "TypeNominal",
                 "name": "NeuronCell",
                 "printedName": "MLModel.NeuronCell",
-                "usr": "s:7MLModel10NeuronCellC"
+                "usr": "c:@M@MLModel@objc(cs)NeuronCell"
               }
             ],
             "declKind": "Func",
@@ -1579,13 +3942,13 @@
                 "kind": "TypeNominal",
                 "name": "NeuronCell",
                 "printedName": "MLModel.NeuronCell",
-                "usr": "s:7MLModel10NeuronCellC"
+                "usr": "c:@M@MLModel@objc(cs)NeuronCell"
               },
               {
                 "kind": "TypeNominal",
                 "name": "CellBodyModel",
                 "printedName": "MLModel.CellBodyModel",
-                "usr": "s:7MLModel13CellBodyModelC"
+                "usr": "c:@M@MLModel@objc(cs)CellBodyModel"
               },
               {
                 "kind": "TypeNominal",
@@ -1596,7 +3959,7 @@
                     "kind": "TypeNominal",
                     "name": "DendriteModel",
                     "printedName": "MLModel.DendriteModel",
-                    "usr": "s:7MLModel13DendriteModelC"
+                    "usr": "c:@M@MLModel@objc(cs)DendriteModel"
                   }
                 ],
                 "usr": "s:Sa"
@@ -1610,35 +3973,73 @@
                     "kind": "TypeNominal",
                     "name": "NerveEndingModel",
                     "printedName": "MLModel.NerveEndingModel",
-                    "usr": "s:7MLModel16NerveEndingModelC"
+                    "usr": "c:@M@MLModel@objc(cs)NerveEndingModel"
                   }
                 ],
                 "usr": "s:Sa"
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7MLModel10NeuronCellC8cellBody9dendrites12nerveEndings3msgAcA0cE5ModelC_SayAA08DendriteJ0CGSayAA011NerveEndingJ0CGSStcfc",
-            "mangledName": "$s7MLModel10NeuronCellC8cellBody9dendrites12nerveEndings3msgAcA0cE5ModelC_SayAA08DendriteJ0CGSayAA011NerveEndingJ0CGSStcfc",
+            "usr": "s:7MLModel10NeuronCellC8cellBody9dendrites12nerveEndings3msgAcA0cE5ModelC_SayAA08DendriteJ0CGSayAA011NerveEndingJ0CGSayypGtcfc",
+            "mangledName": "$s7MLModel10NeuronCellC8cellBody9dendrites12nerveEndings3msgAcA0cE5ModelC_SayAA08DendriteJ0CGSayAA011NerveEndingJ0CGSayypGtcfc",
             "moduleName": "MLModel",
             "declAttributes": [
               "AccessControl"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NeuronCell",
+                "printedName": "MLModel.NeuronCell",
+                "usr": "c:@M@MLModel@objc(cs)NeuronCell"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MLModel@objc(cs)NeuronCell(im)init",
+            "mangledName": "$s7MLModel10NeuronCellCACycfc",
+            "moduleName": "MLModel",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7MLModel10NeuronCellC",
+        "usr": "c:@M@MLModel@objc(cs)NeuronCell",
         "mangledName": "$s7MLModel10NeuronCellC",
         "moduleName": "MLModel",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -1657,6 +4058,41 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CustomStringConvertible",
             "printedName": "CustomStringConvertible",
             "usr": "s:s23CustomStringConvertibleP",
@@ -1664,10 +4100,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -1696,7 +4132,7 @@
                     "kind": "TypeNominal",
                     "name": "NeuronCell",
                     "printedName": "MLModel.NeuronCell",
-                    "usr": "s:7MLModel10NeuronCellC"
+                    "usr": "c:@M@MLModel@objc(cs)NeuronCell"
                   }
                 ],
                 "usr": "s:Sa"
@@ -1730,6 +4166,60 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "msgs",
+            "printedName": "msgs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7MLModel11NerveTissueC4msgsSayypGvp",
+            "mangledName": "$s7MLModel11NerveTissueC4msgsSayypGvp",
+            "moduleName": "MLModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MLModel11NerveTissueC4msgsSayypGvg",
+                "mangledName": "$s7MLModel11NerveTissueC4msgsSayypGvg",
+                "moduleName": "MLModel",
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Var",
@@ -1872,29 +4362,20 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[[Swift.String]]",
+                "printedName": "[Any]",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
                   }
                 ],
                 "usr": "s:Sa"
               }
             ],
             "declKind": "Var",
-            "usr": "s:7MLModel5BrainC4msgsSaySaySSGGvp",
-            "mangledName": "$s7MLModel5BrainC4msgsSaySaySSGGvp",
+            "usr": "s:7MLModel5BrainC4msgsSayypGvp",
+            "mangledName": "$s7MLModel5BrainC4msgsSayypGvp",
             "moduleName": "MLModel",
             "declAttributes": [
               "AccessControl"
@@ -1908,29 +4389,20 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[[Swift.String]]",
+                    "printedName": "[Any]",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
                       }
                     ],
                     "usr": "s:Sa"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MLModel5BrainC4msgsSaySaySSGGvg",
-                "mangledName": "$s7MLModel5BrainC4msgsSaySaySSGGvg",
+                "usr": "s:7MLModel5BrainC4msgsSayypGvg",
+                "mangledName": "$s7MLModel5BrainC4msgsSayypGvg",
                 "moduleName": "MLModel",
                 "accessorKind": "get"
               }
@@ -2014,46 +4486,676 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Organ\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
-      "kind": "StringLiteral",
-      "offset": 283,
-      "length": 16,
-      "value": "\"com.ACInc.Boke\""
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 765,
+      "length": 1,
+      "value": "0"
     },
     {
-      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Organ\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
       "kind": "IntegerLiteral",
+      "offset": 841,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 909,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 1155,
+      "length": 10,
+      "value": "\"cellBody\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1285,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 1475,
+      "length": 6,
+      "value": "\"cell\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 1578,
+      "length": 11,
+      "value": "\"create_at\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1632,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 1691,
+      "length": 6,
+      "value": "\"cell\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1767,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1813,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 1816,
+      "length": 6,
+      "value": "\"cell\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1949,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 2110,
+      "length": 6,
+      "value": "\"cell\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2154,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2199,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 2202,
+      "length": 6,
+      "value": "\"cell\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2341,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Main\/Entrance.swift",
+      "kind": "StringLiteral",
+      "offset": 2504,
+      "length": 6,
+      "value": "\"cell\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "IntegerLiteral",
+      "offset": 126,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "StringLiteral",
+      "offset": 907,
+      "length": 51,
+      "value": "\"DELETE FROM T_Status WHERE statusId = \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "StringLiteral",
+      "offset": 957,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "StringLiteral",
+      "offset": 2430,
+      "length": 69,
+      "value": "\"INSERT INTO T_Status(status, cellBody, create_at) VALUES (?, ?, ?);\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "StringLiteral",
+      "offset": 2728,
+      "length": 11,
+      "value": "\"create_at\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2861,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "StringLiteral",
+      "offset": 3021,
+      "length": 6,
+      "value": "\"cell\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3078,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/DAL\/DeployDAL.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3309,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 177,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 777,
+      "length": 13,
+      "value": "\"nerveEnding\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 867,
+      "length": 10,
+      "value": "\"dendrite\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 950,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 1028,
+      "length": 13,
+      "value": "\"expiresDate\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 1106,
+      "length": 10,
+      "value": "\"cellBody\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 1239,
+      "length": 13,
+      "value": "\"nerveEnding\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 1300,
+      "length": 10,
+      "value": "\"dendrite\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 1357,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 1417,
+      "length": 13,
+      "value": "\"expiresDate\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "StringLiteral",
+      "offset": 1478,
+      "length": 10,
+      "value": "\"cellBody\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Model\/Deploy.swift",
+      "kind": "Array",
+      "offset": 1642,
+      "length": 38,
+      "value": "[\"message\", \"expiresDate\", \"cellBody\"]"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Tools\/SqliteManager.swift",
+      "kind": "StringLiteral",
+      "offset": 165,
+      "length": 11,
+      "value": "\"readme.db\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/StorageSqlite\/Tools\/SqliteManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1240,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 182,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "StringLiteral",
+      "offset": 296,
+      "length": 7,
+      "value": "\"rnaId\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "StringLiteral",
+      "offset": 398,
+      "length": 7,
+      "value": "\"rnaId\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "StringLiteral",
+      "offset": 536,
+      "length": 19,
+      "value": "\"com.ACInc.MLModel\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 563,
+      "length": 5,
+      "value": "-1011"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "Dictionary",
+      "offset": 580,
+      "length": 37,
+      "value": "[(\"error\", \"the array has duplicates\")]"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "StringLiteral",
+      "offset": 716,
+      "length": 27,
+      "value": "\"<THIRD DNA \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
+      "kind": "StringLiteral",
+      "offset": 741,
+      "length": 1,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 190,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "StringLiteral",
+      "offset": 276,
+      "length": 6,
+      "value": "\"dnas\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "StringLiteral",
+      "offset": 376,
+      "length": 6,
+      "value": "\"dnas\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "StringLiteral",
+      "offset": 556,
+      "length": 19,
+      "value": "\"com.ACInc.MLModel\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 583,
+      "length": 5,
+      "value": "-1011"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "Dictionary",
+      "offset": 600,
+      "length": 37,
+      "value": "[(\"error\", \"the array has duplicates\")]"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "StringLiteral",
+      "offset": 851,
+      "length": 26,
+      "value": "\"<SECOND NUCLEUS \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "kind": "StringLiteral",
+      "offset": 875,
+      "length": 1,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/CellBodyModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 193,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/CellBodyModel.swift",
+      "kind": "StringLiteral",
+      "offset": 282,
+      "length": 9,
+      "value": "\"nucleus\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/CellBodyModel.swift",
+      "kind": "StringLiteral",
+      "offset": 388,
+      "length": 9,
+      "value": "\"nucleus\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/CellBodyModel.swift",
+      "kind": "StringLiteral",
+      "offset": 714,
+      "length": 29,
+      "value": "\"<FIRST CELLBODY \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/CellBodyModel.swift",
+      "kind": "StringLiteral",
+      "offset": 741,
+      "length": 1,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 192,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
+      "kind": "StringLiteral",
       "offset": 307,
-      "length": 5,
-      "value": "-1011"
+      "length": 9,
+      "value": "\"percent\""
     },
     {
-      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Organ\/Tissue\/Cell\/First\/Second\/Third\/DNAModel.swift",
-      "kind": "Dictionary",
-      "offset": 324,
-      "length": 37,
-      "value": "[(\"error\", \"the array has duplicates\")]"
-    },
-    {
-      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Organ\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
       "kind": "StringLiteral",
-      "offset": 295,
-      "length": 16,
-      "value": "\"com.ACInc.Boke\""
+      "offset": 370,
+      "length": 8,
+      "value": "\"deploy\""
     },
     {
-      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Organ\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 319,
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
+      "kind": "StringLiteral",
+      "offset": 494,
+      "length": 8,
+      "value": "\"deploy\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
+      "kind": "StringLiteral",
+      "offset": 549,
+      "length": 9,
+      "value": "\"percent\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 637,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1607,
+      "length": 65,
+      "value": "\"<FIRST DENDRITE \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/DendriteModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1670,
+      "length": 1,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 198,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
+      "length": 9,
+      "value": "\"percent\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "StringLiteral",
+      "offset": 371,
+      "length": 8,
+      "value": "\"deploy\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "StringLiteral",
+      "offset": 490,
+      "length": 8,
+      "value": "\"deploy\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "StringLiteral",
+      "offset": 545,
+      "length": 9,
+      "value": "\"percent\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 633,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1626,
+      "length": 68,
+      "value": "\"<FIRST NERVEENDING \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/First\/NerveEndingModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1692,
+      "length": 1,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 185,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 270,
       "length": 5,
-      "value": "-1011"
+      "value": "\"msg\""
     },
     {
-      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Organ\/Tissue\/Cell\/First\/Second\/NucleusModel.swift",
-      "kind": "Dictionary",
-      "offset": 336,
-      "length": 37,
-      "value": "[(\"error\", \"the array has duplicates\")]"
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 320,
+      "length": 14,
+      "value": "\"nerveEndings\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 376,
+      "length": 11,
+      "value": "\"dendrites\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 428,
+      "length": 10,
+      "value": "\"cellBody\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 531,
+      "length": 5,
+      "value": "\"msg\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "Array",
+      "offset": 551,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 604,
+      "length": 14,
+      "value": "\"nerveEndings\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "Array",
+      "offset": 646,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 696,
+      "length": 11,
+      "value": "\"dendrites\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "Array",
+      "offset": 732,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 781,
+      "length": 10,
+      "value": "\"cellBody\""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 891,
+      "length": 67,
+      "value": "\"<CELL NEURONCELL \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 915,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 927,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 940,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/monkeyhammer\/Documents\/acml\/MLModel\/Transformer\/Tissue\/Cell\/NeuronCell.swift",
+      "kind": "StringLiteral",
+      "offset": 956,
+      "length": 1,
+      "value": "\">\""
     }
   ]
 }

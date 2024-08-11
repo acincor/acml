@@ -6,79 +6,112 @@ import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public class RNAModel : Swift.CustomStringConvertible, Swift.Hashable {
-  public init(id: Swift.Int)
-  public func hash(into hasher: inout Swift.Hasher)
-  public var description: Swift.String {
+public func loadDeploy() throws -> MLModel.Brain
+public func rand(_ range: Swift.Double, _ n: Swift.Int, _ messagesCount: Swift.Int, _ neuronCellsCount: Swift.Int, _ clear: Swift.Bool, _ build: Swift.Bool) throws -> MLModel.Brain
+@_hasMissingDesignatedInitializers open class DeployDAL {
+  public class func clearDataCache()
+  public class func removeCache(_ statusId: Swift.Int)
+  public static func collectCellBody() throws -> MLModel.CellBodyModel
+  public static var loadNewCellBody: MLModel.CellBodyModel? {
     get
   }
-  public static func == (lhs: MLModel.RNAModel, rhs: MLModel.RNAModel) -> Swift.Bool
+  public static var expiresDates: [Swift.Int : Foundation.Date]
+  public class func saveSingleCache(array dict: [Swift.String : Any])
+  public class func saveCache(array data: [[Swift.String : Any]])
+  public class func loadStatus() throws -> [MLModel.NeuronCell]
   @objc deinit
-  public var hashValue: Swift.Int {
-    get
-  }
 }
-public class DNAModel : Swift.CustomStringConvertible, Swift.Hashable {
-  public init(rnas: [MLModel.RNAModel]) throws
-  public func hash(into hasher: inout Swift.Hasher)
-  public var description: Swift.String {
-    get
+@objc public class Deploy : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc public var nerveEnding: MLModel.NerveEndingModel?
+  @objc public var dendrite: MLModel.DendriteModel?
+  public init(dict: [Swift.String : Any])
+  public static func == (lhs: MLModel.Deploy, rhs: MLModel.Deploy) -> Swift.Bool
+  @objc required public init(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with encoder: Foundation.NSCoder)
+  @objc override dynamic public func setValue(_ value: Any?, forUndefinedKey key: Swift.String)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public class DNAModel : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
+  public init(rnaId: [Swift.Int]) throws
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
   public static func == (lhs: MLModel.DNAModel, rhs: MLModel.DNAModel) -> Swift.Bool
   @objc deinit
-  public var hashValue: Swift.Int {
-    get
-  }
 }
-public class NucleusModel : Swift.CustomStringConvertible, Swift.Hashable {
+@objc public class NucleusModel : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
   public init(dnas: [MLModel.DNAModel]) throws
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: MLModel.NucleusModel, rhs: MLModel.NucleusModel) -> Swift.Bool
-  public var description: Swift.String {
-    get
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
   @objc deinit
-  public var hashValue: Swift.Int {
-    get
-  }
 }
-public class CellBodyModel : Swift.CustomStringConvertible {
-  public init(nucleus: MLModel.NucleusModel) throws
+@objc public class CellBodyModel : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
+  public init(nucleus: MLModel.NucleusModel)
   public static func == (lhs: MLModel.CellBodyModel, rhs: MLModel.CellBodyModel) -> Swift.Bool
-  public var description: Swift.String {
-    get
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
   @objc deinit
 }
-public class DendriteModel {
-  public var nerveEnding: MLModel.NerveEndingModel?
-  public init(nerveEnding: MLModel.NerveEndingModel? = nil, percent: Swift.Double? = nil, get: @escaping (() -> (Foundation.Date?)), complete: @escaping ((Foundation.Date?) -> ())) throws
+@objc public class DendriteModel : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc required public init(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with encoder: Foundation.NSCoder)
+  @objc public var deploy: MLModel.Deploy?
+  public init(percent: Swift.Double = 1.00, deploy: MLModel.Deploy? = nil)
   public static func == (lhs: MLModel.DendriteModel, rhs: MLModel.DendriteModel) -> Swift.Bool
-  public var description: Swift.String {
-    get
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
   @objc deinit
 }
-public class NerveEndingModel {
-  public var dendrite: MLModel.DendriteModel?
-  public init(dendrite: MLModel.DendriteModel? = nil, percent: Swift.Double? = nil, get: @escaping (() -> (Foundation.Date?)), complete: @escaping ((Foundation.Date?) -> ())) throws
+@objc public class NerveEndingModel : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc required public init(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with encoder: Foundation.NSCoder)
+  @objc public var deploy: MLModel.Deploy?
+  public init(percent: Swift.Double = 1.00, deploy: MLModel.Deploy? = nil)
   public static func == (lhs: MLModel.NerveEndingModel, rhs: MLModel.NerveEndingModel) -> Swift.Bool
-  public var description: Swift.String {
-    get
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
   @objc deinit
 }
-public class NeuronCell : Swift.CustomStringConvertible, Swift.Equatable {
-  public var description: Swift.String {
-    get
+@objc public class NeuronCell : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
+  public var dendrites: [MLModel.DendriteModel]
+  public var nerveEndings: [MLModel.NerveEndingModel]
+  public func build()
   public static func == (lhs: MLModel.NeuronCell, rhs: MLModel.NeuronCell) -> Swift.Bool
-  public init(cellBody: MLModel.CellBodyModel, dendrites: [MLModel.DendriteModel], nerveEndings: [MLModel.NerveEndingModel], msg: Swift.String)
+  public init(cellBody: MLModel.CellBodyModel, dendrites: [MLModel.DendriteModel], nerveEndings: [MLModel.NerveEndingModel], msg: [Any])
   @objc deinit
 }
 public class NerveTissue : Swift.CustomStringConvertible {
   public init(neuronCells: [MLModel.NeuronCell])
   public func build()
+  public var msgs: [Any] {
+    get
+  }
   public var description: Swift.String {
     get
   }
@@ -87,7 +120,7 @@ public class NerveTissue : Swift.CustomStringConvertible {
 public class Brain : Swift.CustomStringConvertible {
   public init(nerveTissues: [MLModel.NerveTissue])
   public func build()
-  public var msgs: [[Swift.String]] {
+  public var msgs: [Any] {
     get
   }
   public var description: Swift.String {
@@ -95,7 +128,3 @@ public class Brain : Swift.CustomStringConvertible {
   }
   @objc deinit
 }
-extension MLModel.DendriteModel : Swift.Equatable {}
-extension MLModel.DendriteModel : Swift.CustomStringConvertible {}
-extension MLModel.NerveEndingModel : Swift.Equatable {}
-extension MLModel.NerveEndingModel : Swift.CustomStringConvertible {}

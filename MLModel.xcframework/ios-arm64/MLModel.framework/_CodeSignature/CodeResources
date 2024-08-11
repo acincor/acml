@@ -4,9 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/FMDB.h</key>
+		<data>
+		ZbdqKLFtBXKG7ouKZbUjsLAIcwg=
+		</data>
+		<key>Headers/FMDatabase.h</key>
+		<data>
+		/DsNTYVycR1WuPNzDSpakQ+rU5I=
+		</data>
+		<key>Headers/FMDatabaseAdditions.h</key>
+		<data>
+		jNf9OLOM8/E3FhiTLEbnLSbCnwo=
+		</data>
+		<key>Headers/FMDatabasePool.h</key>
+		<data>
+		GRPIlJeLgiYtr0gYrCsERD6Msyo=
+		</data>
+		<key>Headers/FMDatabaseQueue.h</key>
+		<data>
+		a7VhOls2JdFgYvnYVEziTo5N7fw=
+		</data>
+		<key>Headers/FMResultSet.h</key>
+		<data>
+		ttXlMDDozAXOMnYHKscshFhNl6I=
+		</data>
 		<key>Headers/MLModel.h</key>
 		<data>
-		aBDtHq8l5vfaKZ46gmmPwFAFIaM=
+		onSy3uu38P26lfH3KTvbb7KOcmM=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,75 +38,121 @@
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		0eq+w6LCRgZ1gmJPDT39ZWh5hL4=
+		FCdSy96fJUrjMgX8mOPhA/uwp0g=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		7KNZtQZS+hICl+H2++jYtFT+j+U=
+		yKCn3bIA4D/3suUvytoivBDNIoA=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		rQHhg6awO8p4Pn4z6Xnzo6EHcq0=
+		HoHm8jOCK/JsgkYw8o1flUnoxBs=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		7KNZtQZS+hICl+H2++jYtFT+j+U=
+		yKCn3bIA4D/3suUvytoivBDNIoA=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		MWG//N6wj4lVYyCq1cY0kUFU+64=
+		W5pwN1RlilSS2G2FYzP16YsoknI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		31RRmsEeFN+NF0UtADjvmcjZi6Q=
 		</data>
+		<key>db.sql</key>
+		<data>
+		e/b4ggEJ6rLhIRJVnz8Iormy9Hk=
+		</data>
 		<key>readme.md</key>
 		<data>
-		52zRmPxnJt0XDnJikLtIR+b7Lp4=
+		6ohi51CXqBbKAWmMdmaeUe80abA=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/FMDB.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			e2cOh7hpbu0E9cYPuybI6IPjQJCnqdAYqUtwy2Jd0rY=
+			</data>
+		</dict>
+		<key>Headers/FMDatabase.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ka+vvsgneJZSsoDDNxyfNTE50O8K8tesxGqLgEIoM5c=
+			</data>
+		</dict>
+		<key>Headers/FMDatabaseAdditions.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ERjv4awBgO3rs6TN02cDcLB3sDfflWvoNq10W0sorXo=
+			</data>
+		</dict>
+		<key>Headers/FMDatabasePool.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0dcniSiQZvUaNfubFR3W8NEEGcnSZZeXlJmj46ctQ3I=
+			</data>
+		</dict>
+		<key>Headers/FMDatabaseQueue.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vpWGAz/zKlIouoTdWIymwxsAE1uRQnrgZIVX4r68EPE=
+			</data>
+		</dict>
+		<key>Headers/FMResultSet.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+QNK7GVKITWRQb+zGXFfNL/r6c1QUmhfGA5TyGHkMZg=
+			</data>
+		</dict>
 		<key>Headers/MLModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AdkqW4t+mwnx3Xcg43dP7Fd+rS71MojKRztE9gTK4K8=
+			uqewEWXVK14wtoBSf3vfkW8rK3TyAYV6BMMU4TS6IS0=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XWWqKEDMSUTwCeMZZWkjzRv0t9dOKYvDk22kM/WO/+E=
+			gC5aJ8Ny3dJwCvLjqtYxAWgn72nRe8HsLHcMVwcz3oc=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QLTNLSEzYkFajwlDgG2eB99sfw/sNzNU+UDcO+NdLyQ=
+			5BetXq9A8lHOC27Wt/DSts9UImhk0cpkqVU0KTAIeFs=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GfflVz6bT5Ua3WE3DkSOXTbpCPC143QO2bqx/xQV+2k=
+			OE+FVmznTD0L9DzI0ZisRlxZIFL1StojWM96/4WgbsA=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QLTNLSEzYkFajwlDgG2eB99sfw/sNzNU+UDcO+NdLyQ=
+			5BetXq9A8lHOC27Wt/DSts9UImhk0cpkqVU0KTAIeFs=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KClgt02S3MoNNp01PLbAVsdqD9M7QoiUcBv78j1WOHU=
+			JmfvooPaYw2zmo36DXqMD3uMbxnMh8Jjs+YNcM+oEDo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -92,11 +162,18 @@
 			8B3gYf3Fl6Cx+bZAdeZIn/D8R6wSdLvQBqCp/3zu2zc=
 			</data>
 		</dict>
+		<key>db.sql</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i6ZEUkQGTM1Kir7/pKDgreJJsPCQohuHowf15lOPbFQ=
+			</data>
+		</dict>
 		<key>readme.md</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UWO8ivjNPLWBMWp89SeqFWTdpQPfiJAAknJb7tRPnE0=
+			ylhN7DGD0P6BPGAyF/LzCI6ZeGVWuZt45B0s6+NxDDg=
 			</data>
 		</dict>
 	</dict>

@@ -4,9 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/FMDB.h</key>
+		<data>
+		ZbdqKLFtBXKG7ouKZbUjsLAIcwg=
+		</data>
+		<key>Headers/FMDatabase.h</key>
+		<data>
+		/DsNTYVycR1WuPNzDSpakQ+rU5I=
+		</data>
+		<key>Headers/FMDatabaseAdditions.h</key>
+		<data>
+		jNf9OLOM8/E3FhiTLEbnLSbCnwo=
+		</data>
+		<key>Headers/FMDatabasePool.h</key>
+		<data>
+		GRPIlJeLgiYtr0gYrCsERD6Msyo=
+		</data>
+		<key>Headers/FMDatabaseQueue.h</key>
+		<data>
+		a7VhOls2JdFgYvnYVEziTo5N7fw=
+		</data>
+		<key>Headers/FMResultSet.h</key>
+		<data>
+		ttXlMDDozAXOMnYHKscshFhNl6I=
+		</data>
 		<key>Headers/MLModel.h</key>
 		<data>
-		aBDtHq8l5vfaKZ46gmmPwFAFIaM=
+		onSy3uu38P26lfH3KTvbb7KOcmM=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,130 +38,176 @@
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		0eq+w6LCRgZ1gmJPDT39ZWh5hL4=
+		FCdSy96fJUrjMgX8mOPhA/uwp0g=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		hUQ5CCgdjxqsGB45nABHO/ptmJU=
+		Tq9te5ImPSSmWN9SHGhuUegUMEc=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		wBf26X8tUWd3H8jLX1C4+KWJZd0=
+		uUvOj4dzIDYkTBh1yzTeK+k8Xk4=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hUQ5CCgdjxqsGB45nABHO/ptmJU=
+		Tq9te5ImPSSmWN9SHGhuUegUMEc=
 		</data>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/4BKlJsC8gaFaxgMSN5t/VP+1lQ=
+		u/r5ExVmLX8CO32YFoi+nWCZ9iI=
 		</data>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		0eq+w6LCRgZ1gmJPDT39ZWh5hL4=
+		FCdSy96fJUrjMgX8mOPhA/uwp0g=
 		</data>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mAaF10te9O8EyADDW9YfJoXaA70=
+		dRnyn/Q+uLd+UNnhq1YEtsUEY4Y=
 		</data>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		PLvYfkHkhexJN4nJQ/xkyKNEiLY=
+		n9KKUXeRIr3NH/vyfg9leL/3A3I=
 		</data>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mAaF10te9O8EyADDW9YfJoXaA70=
+		dRnyn/Q+uLd+UNnhq1YEtsUEY4Y=
 		</data>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hM6SS4VM8ELKQLbiNPeaclvW/EI=
+		kvpDHpkmbmcTFI6kTLcJz77kopc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		31RRmsEeFN+NF0UtADjvmcjZi6Q=
 		</data>
+		<key>db.sql</key>
+		<data>
+		e/b4ggEJ6rLhIRJVnz8Iormy9Hk=
+		</data>
 		<key>readme.md</key>
 		<data>
-		52zRmPxnJt0XDnJikLtIR+b7Lp4=
+		6ohi51CXqBbKAWmMdmaeUe80abA=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/FMDB.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			e2cOh7hpbu0E9cYPuybI6IPjQJCnqdAYqUtwy2Jd0rY=
+			</data>
+		</dict>
+		<key>Headers/FMDatabase.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ka+vvsgneJZSsoDDNxyfNTE50O8K8tesxGqLgEIoM5c=
+			</data>
+		</dict>
+		<key>Headers/FMDatabaseAdditions.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ERjv4awBgO3rs6TN02cDcLB3sDfflWvoNq10W0sorXo=
+			</data>
+		</dict>
+		<key>Headers/FMDatabasePool.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0dcniSiQZvUaNfubFR3W8NEEGcnSZZeXlJmj46ctQ3I=
+			</data>
+		</dict>
+		<key>Headers/FMDatabaseQueue.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vpWGAz/zKlIouoTdWIymwxsAE1uRQnrgZIVX4r68EPE=
+			</data>
+		</dict>
+		<key>Headers/FMResultSet.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+QNK7GVKITWRQb+zGXFfNL/r6c1QUmhfGA5TyGHkMZg=
+			</data>
+		</dict>
 		<key>Headers/MLModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AdkqW4t+mwnx3Xcg43dP7Fd+rS71MojKRztE9gTK4K8=
+			uqewEWXVK14wtoBSf3vfkW8rK3TyAYV6BMMU4TS6IS0=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XWWqKEDMSUTwCeMZZWkjzRv0t9dOKYvDk22kM/WO/+E=
+			gC5aJ8Ny3dJwCvLjqtYxAWgn72nRe8HsLHcMVwcz3oc=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jMs33qPiwf2j2vm4x2B08/9PbePZ2SmPD6UjzLc6iWE=
+			hEXkFGADIWqG8yW0GkhBu5ofvGQDglsLOH0SIK1cbp8=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fnJWvI+7czhBjyJfMYNS3chJZX8uALibZoT3vFyd/6I=
+			XHoMQb/pLG0/3CZvr1HM46/DHFKJ7TSnr6oQWIPPPCw=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jMs33qPiwf2j2vm4x2B08/9PbePZ2SmPD6UjzLc6iWE=
+			hEXkFGADIWqG8yW0GkhBu5ofvGQDglsLOH0SIK1cbp8=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oAf+Ops4tT4pKkLSB+JF86rX0u5ERV6ZjJVE29g7SNo=
+			g+QuZnKBswi7Jy4jvY27yDr/o9CoKnwmtm/8By4THHY=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XWWqKEDMSUTwCeMZZWkjzRv0t9dOKYvDk22kM/WO/+E=
+			gC5aJ8Ny3dJwCvLjqtYxAWgn72nRe8HsLHcMVwcz3oc=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TDVzNbUbAnrLDHPhoqgAgItFK6KjJN7ohpPvBgFSj40=
+			GzVV7mW+OFPdS99onHtzTzazkP1fj+LHIzs47GzIAbg=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E5H+dWPUc5E4ysMXH/oO6ztxBJK4f9Oer/W8JzalC5A=
+			r8Z1EsTVhiipkMFrffQDguSfK8mT3iOUzkMOzgRUYTw=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TDVzNbUbAnrLDHPhoqgAgItFK6KjJN7ohpPvBgFSj40=
+			GzVV7mW+OFPdS99onHtzTzazkP1fj+LHIzs47GzIAbg=
 			</data>
 		</dict>
 		<key>Modules/MLModel.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			phx+eU8yBNqbI1ZwEbvX5fE20XSj66InKfGMMclfLxU=
+			xFuOIxj0As7YAyn22f/rdlz6sP2y/B+KsKEwrInn4ok=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -147,11 +217,18 @@
 			8B3gYf3Fl6Cx+bZAdeZIn/D8R6wSdLvQBqCp/3zu2zc=
 			</data>
 		</dict>
+		<key>db.sql</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i6ZEUkQGTM1Kir7/pKDgreJJsPCQohuHowf15lOPbFQ=
+			</data>
+		</dict>
 		<key>readme.md</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UWO8ivjNPLWBMWp89SeqFWTdpQPfiJAAknJb7tRPnE0=
+			ylhN7DGD0P6BPGAyF/LzCI6ZeGVWuZt45B0s6+NxDDg=
 			</data>
 		</dict>
 	</dict>

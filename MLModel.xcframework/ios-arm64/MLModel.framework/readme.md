@@ -6,176 +6,150 @@ A Model about simulate brain
 
 A Model about simulate brain
 
-## Topics
-
-### Organ
- - Parameter
-    **id: Int**
- - Type
-    **Identifier**
- - Defined
+## Transformer
+    
+### DNAModel
 ```
-var ids = [Int]()
-func id() -> Int{
-    var iden = Int.random(in: 1..<100000000000)
-    while(ids.contains(iden)) {
-        iden = Int.random(in: 1..<100000000000)
-    }
-    self.ids.append(iden)
-    return iden
+public class DNAModel: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    public func encode(with coder: NSCoder)
+    public required init?(coder: NSCoder)
+    public init(rnaId: [Int]) throws
+    public override var description: String
+    public static func == (lhs: DNAModel, rhs: DNAModel) -> Bool
 }
-var rnas = [
-    RNAModel(id: id()),
-    RNAModel(id:id())
-]
-var nextRnas = [
-    RNAModel(id: id()),
-    RNAModel(id: id())
-]
+```
+### NucleusModel
+```
+public class NucleusModel: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    public func encode(with coder: NSCoder)
+    public required init?(coder: NSCoder)
+    public init(dnas: [DNAModel]) throws
+    public static func == (lhs: NucleusModel, rhs: NucleusModel) -> Bool
+    public override var description: String
+}
 ```
     
-### DNA
- - Parameter
-    **rnas: [RNA]** 
- - Type
-    **Identifier**
- - Defined
+### CellBodyModel
 ```
-var dnas = [
-    try DNAModel(rnas: rnas)
-]
-var nextDnas = [
-    try DNAModel(rnas: nextRnas)
-]
-```
-### Nucleus
- - Parameter
-    **dnas: [DNA]**
- - Type
-    **Identifier**
- - Defined
-```
-let nucleus = try NucleusModel(dnas: dnas)
-let nextNucleus = try NucleusModel(dnas: nextDnas)
+public class CellBodyModel: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    public func encode(with coder: NSCoder)
+    public required init?(coder: NSCoder)
+    public init(nucleus: NucleusModel)
+    public static func == (lhs: CellBodyModel, rhs: CellBodyModel) -> Bool
+    public override var description: String
+}
 ```
     
-### cellBody
- - Parameter
-    **nucleus: Nucleus**
- - Type
-    **Identifier**
- - Defined
+### DendriteModel
 ```
-let cellBody = try CellBodyModel(nucleus: nucleus)
-let nextCellBody = try CellBodyModel(nucleus: nextNucleus)
-```
-    
-### Message Protocol
- - Parameter
-    **expiresDate: Date?
-        geT: (() -> (Date?))
-        complete: ((Date?) -> ())
-        percent: Double?**
- - Type
-    **Protocol**
-    
-### Dendrite
- - Parameter
-    **nerveEnding: NerveEndingModel?
-        message: String
-        expiresDate: Date?
-        geT: (() -> (Date?))
-        complete: ((Date?) -> ())
-        percent: Double?**
- - Type
-    **MessageProtocol**
- - Defined
-```
-//For example
-let expiresDates = [Date]()
-let dendrites = [
-    try DendriteModel(percent: 1, get: {
-        self.expiresDates[0] 
-    }, complete: { date in
-        self.expiresDates.append(date ?? Date())
-    })
-]
-let nextDendrites = [
-    try DendriteModel(percent: 0.4, get: { 
-        self.expiresDates[1] 
-    }, complete: { date in 
-        self.expiresDates.append(date ?? Date()) 
-    })
-]
+public class DendriteModel: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    required public init(coder aDecoder: NSCoder)
+    public func encode(with encoder: NSCoder)
+    @objc public var deploy: Deploy?
+    public init(percent: Double = 1.00, deploy: Deploy? = nil)
+    @objc func receive()
+    public static func == (lhs: DendriteModel, rhs: DendriteModel) -> Bool
+    public override var description: String
+}
 ```
     
-### NerveEnding
- - Parameter
-    **dendrite: DendriteModel?
-        message: String
-        expiresDate: Date?
-        geT: (() -> (Date?))
-        complete: ((Date?) -> ())
-        percent: Double?**
- - Type
-    **MessageProtocol**
- - Defined
+### NerveEndingModel
 ```
-//...... dendrites definded
-let nerveEndings = [
-    try NerveEndingModel(dendrite: nextDendrites[0], percent: 0.9,get: { 
-        self.expiresDates[2] 
-    },complete: { date in 
-        self.expiresDates.append(date ?? Date())
-    })
-]
-nextDendrites[0].nerveEnding = nerveEndings[0] // binded
-let nextNerveEndings = [
-    try NerveEndingModel(percent: 0.3,get: {
-        self.expiresDates[3] 
-    }, complete: {date in 
-        self.expiresDates.append(date ?? Date())
-    })
-]
+public class NerveEndingModel: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    required public init(coder aDecoder: NSCoder)
+    public func encode(with encoder: NSCoder)
+    @objc public var deploy: Deploy?
+    public init(percent: Double = 1.00, deploy: Deploy? = nil)
+    @objc func send()
+    public static func == (lhs: NerveEndingModel, rhs: NerveEndingModel) -> Bool
+    public override var description: String
+}
 ```
     
 ### NeuronCell
- - Parameter
-    **msg: String
-        dendrites: [DendriteModel]
-        nerveEndings: [NerveEndingModel]
-        cellBody: CellBodyModel**
- - Type
-    **MessageProtocol**
- - Defined
 ```
-let neuronCells = [
-    NeuronCell(cellBody: cellBody, dendrites: dendrites, nerveEndings: nerveEndings, msg: "xcode"),
-    NeuronCell(cellBody: nextCellBody, dendrites: nextDendrites, nerveEndings: nextNerveEndings, msg: "是一种集成环境式IDE")
-]
+public class NeuronCell: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    public func encode(with coder: NSCoder)
+    public required init?(coder: NSCoder)
+    public func build()
+    public var dendrites: [DendriteModel]
+    public var nerveEndings: [NerveEndingModel]
+    public override var description: String
+    public static func == (lhs: NeuronCell, rhs: NeuronCell) -> Bool
+    public init(cellBody: CellBodyModel, dendrites: [DendriteModel], nerveEndings: [NerveEndingModel], msg: [Any])
+}
 ```
     
 ### NeuronTissue
- - Parameter
-    **neuronCells: [NeuronCell]**
- - Type
-    **CustomStringConvertiable**
- - Defined
 ```
-let nerveTissues = [NerveTissue(neuronCells: neuronCells)]
+public class NerveTissue: CustomStringConvertible {
+    public init(neuronCells: [NeuronCell])
+    public func build()
+    public var msgs: [Any]
+    public var description: String
+}
 ```
     
 ### Brain
- - Parameter
-    **nerveTissues: [NerveTissue]**
- - Type
-    **CustomStringConvertiable**
- - Defined
 ```
-let brain = Brain(nerveTissues: nerveTissues)
+public class Brain: CustomStringConvertible {
+    public init(nerveTissues: [NerveTissue])
+    public func build()
+    public var msgs: [Any]
+    public var description: String
+}
 ```
-    
+
+## StorageSqlite
+
+### DeployDAL
+```
+open class DeployDAL {
+    public class func clearDataCache()
+    public class func removeCache(_ statusId: Int)
+    public static func collectCellBody()
+    public static var loadNewCellBody: CellBodyModel?
+    public static var expiresDates = [Int:Date]()
+    public class func saveSingleCache(array dict: [String:Any])
+    public class func saveCache(array data: [[String:Any]])
+    public class func loadStatus() throws -> [NeuronCell]
+}
+```
+
+### Deploy
+```
+public class Deploy: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    public static func == (lhs: Deploy, rhs: Deploy) -> Bool
+    required public init(coder aDecoder: NSCoder)
+    @objc public var nerveEnding: NerveEndingModel?
+    public init(dict: [String: Any])
+    @objc public var dendrite: DendriteModel?
+    public func encode(with encoder: NSCoder)
+    public override func setValue(_ value: Any?, forUndefinedKey key: String)
+    public override var description: String
+}
+```
+### SqliteManager
+```
+Private Class
+```
+## Entrance
+```
+public func loadDeploy() throws -> Brain
+public func rand(_ range: Double, _ n: Int, _ messagesCount: Int, _ neuronCellsCount: Int, _ clear: Bool, _ build: Bool) throws -> Brain
+```
+# HOW TO GENERATE A BRAIN WITH RANDOM MESSAGES
+```
+rand(_ range: Double, _ n: Int, _ messagesCount: Int, _ neuronCellsCount: Int, _ clear: Bool, _ build: Bool)
+```
 # HOW TO OUTPUT MSGS ON CONSOLE
 ```
-NSLog(brain.msgs.last?.last ?? "null")
+NSLog(brain.msgs)
 ```
