@@ -16,7 +16,7 @@ class expires {
         let msgs = brain.msgs
         NSLog("built-in msg \(msgs)")
          */
-        let brain = try rand(10, 10, 10, 10, 10, true)
+        let brain = try rand(2, 3, 2, 3, 2, true)
         brain.build { msgs in
             print("the structures of brain \n\(brain.description)")
             print("non-built-in added msg \n\(msgs)")
