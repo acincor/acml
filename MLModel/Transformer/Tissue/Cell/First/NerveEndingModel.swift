@@ -29,15 +29,25 @@ public class NerveEndingModel: NSObject, NSSecureCoding {
         return lhs.deploy == rhs.deploy
     }
     @objc func send() {
-        if Date.now.timeIntervalSince1970 > deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970 {
+        if Date.now.timeIntervalSince1970 > self.deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970 {
             self.percent = 0
             self.deploy?.dendrite = nil
             return
         } else {
-            self.percent = percent * exp(-(deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970) * 0.2)
+            self.percent = self.percent * exp(-(self.deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970) * 0.2)
         }
-        for i in deploy?.dendrite?.deploy?.message ?? []{
-            deploy?.message?.append(i)
+        guard let message = self.deploy?.dendrite?.deploy?.message else {
+            return
+        }
+        if message.isEmpty {
+            return
+        }
+        let contiguous = ContiguousArray(message)
+        contiguous.withUnsafeBufferPointer { buffer in
+            let pointer = buffer.baseAddress!
+            for i in 0..<contiguous.count {
+                self.deploy?.message.append(pointer[i])
+            }
         }
     }
     @objc var percent: Double{

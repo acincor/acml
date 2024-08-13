@@ -10,14 +10,20 @@ public class Brain: CustomStringConvertible {
     public init(nerveTissues: [NerveTissue]) {
         self.nerveTissues = nerveTissues
     }
-    public func build() {
-        for nerveTissue in nerveTissues {
-            nerveTissue.build()
+    public func build(_ finished: @escaping (([[[Any]]]) -> ())) {
+        DispatchQueue.main.async {
+            for nerveTissue in self.nerveTissues {
+                queue.addOperation(QueueTask(closure: {
+                    nerveTissue.build()
+                    return nerveTissue.msgs
+                }))
+            }
+            queue.runTask(finished)
         }
     }
-    public var msgs: [Any] {
-        var messages = [Any]()
-        for nerveTissue in nerveTissues {
+    public var msgs: [[[Any]]] {
+        var messages = [[[Any]]]()
+        for nerveTissue in self.nerveTissues {
             messages.append(nerveTissue.msgs)
         }
         return messages

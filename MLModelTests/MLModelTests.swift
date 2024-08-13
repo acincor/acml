@@ -16,10 +16,11 @@ class expires {
         let msgs = brain.msgs
         NSLog("built-in msg \(msgs)")
          */
-        let brain = try rand(2, 1, 3, 3, true, true)
-        let msgs = brain.msgs
-        print("the structures of brain \n\(brain)")
-        print("non-built-in added msg \n\(msgs)")
+        let brain = try rand(10, 10, 10, 10, 10, true)
+        brain.build { msgs in
+            print("the structures of brain \n\(brain.description)")
+            print("non-built-in added msg \n\(msgs)")
+        }
     }
 }
 struct MLModelTests {

@@ -7,18 +7,30 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public func loadDeploy() throws -> MLModel.Brain
-public func rand(_ range: Swift.Double, _ n: Swift.Int, _ messagesCount: Swift.Int, _ neuronCellsCount: Swift.Int, _ clear: Swift.Bool, _ build: Swift.Bool) throws -> MLModel.Brain
+public func add(_ messages: [[[Any]]], _ n: Swift.Int, _ clear: Swift.Bool) throws -> MLModel.Brain
+public func rand(_ nerveTissuesCount: Swift.Int, _ messagesCount: Swift.Int, _ range: Swift.Int, _ neuronCellsCount: Swift.Int, _ n: Swift.Int, _ clear: Swift.Bool) throws -> MLModel.Brain
+@_hasMissingDesignatedInitializers public class Queue {
+  public func addOperation(_ op: MLModel.QueueTask)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class QueueTask {
+  public var closure: (() -> ([[Any]]))
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers open class DeployDAL {
   public class func clearDataCache()
   public class func removeCache(_ statusId: Swift.Int)
   public static func collectCellBody() throws -> MLModel.CellBodyModel
+  public static var loadNewId: Swift.Int {
+    get
+  }
   public static var loadNewCellBody: MLModel.CellBodyModel? {
     get
   }
   public static var expiresDates: [Swift.Int : Foundation.Date]
   public class func saveSingleCache(array dict: [Swift.String : Any])
   public class func saveCache(array data: [[Swift.String : Any]])
-  public class func loadStatus() throws -> [MLModel.NeuronCell]
+  public class func loadStatus() throws -> [MLModel.NerveTissue]
   @objc deinit
 }
 @objc public class Deploy : ObjectiveC.NSObject, Foundation.NSSecureCoding {
@@ -106,21 +118,24 @@ public func rand(_ range: Swift.Double, _ n: Swift.Int, _ messagesCount: Swift.I
   public init(cellBody: MLModel.CellBodyModel, dendrites: [MLModel.DendriteModel], nerveEndings: [MLModel.NerveEndingModel], msg: [Any])
   @objc deinit
 }
-public class NerveTissue : Swift.CustomStringConvertible {
+@objc public class NerveTissue : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
   public init(neuronCells: [MLModel.NeuronCell])
   public func build()
-  public var msgs: [Any] {
+  public var msgs: [[Any]] {
     get
   }
-  public var description: Swift.String {
-    get
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
   @objc deinit
 }
 public class Brain : Swift.CustomStringConvertible {
   public init(nerveTissues: [MLModel.NerveTissue])
-  public func build()
-  public var msgs: [Any] {
+  public func build(_ finished: @escaping (([[[Any]]]) -> ()))
+  public var msgs: [[[Any]]] {
     get
   }
   public var description: Swift.String {

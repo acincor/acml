@@ -25,15 +25,35 @@ public class DendriteModel: NSObject, NSSecureCoding {
         set()
     }
     @objc func receive() {
-        if Date.now.timeIntervalSince1970 > deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970 {
+        if Date.now.timeIntervalSince1970 > self.deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970 {
             self.percent = 0
             self.deploy?.nerveEnding = nil
             return
         } else {
-            self.percent = percent * exp(-(deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970) * 0.2)
+            self.percent = self.percent * exp(-(self.deploy?.expiresDate?.timeIntervalSince1970 ?? Date.now.timeIntervalSince1970) * 0.2)
         }
-        set()
-        deploy?.message = deploy?.nerveEnding?.deploy?.message ?? []
+        self.set()
+        guard let message = self.deploy?.nerveEnding?.deploy?.message else {
+            return
+        }
+        if message.isEmpty {
+            return
+        }
+        let contiguous = ContiguousArray(message)
+        contiguous.withUnsafeBufferPointer { buffer in
+            let pointer = buffer.baseAddress!
+            self.deploy?.message.removeAll()
+            for i in 0..<contiguous.count {
+                self.deploy?.message.append(pointer[i])
+            }
+        }
+        /*
+        queue.addOperation(QueueTask(closure: {
+            DispatchQueue.global(qos: .background).async {
+            }
+            return self.deploy?.message ?? []
+        }))
+         */
     }
     @objc var percent: Double {
         didSet {

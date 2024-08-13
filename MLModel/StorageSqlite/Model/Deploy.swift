@@ -8,7 +8,8 @@ public class Deploy: NSObject, NSSecureCoding {
     public static var supportsSecureCoding: Bool = true
     @objc public var nerveEnding: NerveEndingModel?
     @objc public var dendrite: DendriteModel?
-    @objc var message: [Any]?
+    @objc var message = [Any]()
+    var messageCount: Int = 0
     @objc var expiresDate: Date?
     @objc var cellBody: CellBodyModel?
     public init(dict: [String: Any]) {
@@ -21,7 +22,7 @@ public class Deploy: NSObject, NSSecureCoding {
     required public init(coder aDecoder: NSCoder) {
         self.nerveEnding = aDecoder.decodeObject(forKey: "nerveEnding") as? NerveEndingModel
         self.dendrite = aDecoder.decodeObject(forKey: "dendrite") as? DendriteModel
-        self.message = aDecoder.decodeObject(forKey: "message") as? [Any]
+        self.message = aDecoder.decodeObject(forKey: "message") as! [Any]
         self.expiresDate = aDecoder.decodeObject(forKey: "expiresDate") as? Date
         self.cellBody = aDecoder.decodeObject(forKey: "cellBody") as? CellBodyModel
     }

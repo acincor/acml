@@ -1,10 +1,10 @@
 # ``MLModel``
 
-A Model about simulate brain
+A Safety Model about simulate brain
 
 ## Overview
 
-A Model about simulate brain
+A Safety Model about simulate brain
 
 ## Transformer
     
@@ -143,11 +143,11 @@ Private Class
 ## Entrance
 ```
 public func loadDeploy() throws -> Brain
-public func rand(_ range: Double, _ n: Int, _ messagesCount: Int, _ neuronCellsCount: Int, _ clear: Bool, _ build: Bool) throws -> Brain
+public func add(_ messages: [[Any]], _ n: Int, _ clear: Bool, _ build: Bool) throws -> Brain
 ```
 # HOW TO GENERATE A BRAIN WITH RANDOM MESSAGES
 ```
-rand(_ range: Double, _ n: Int, _ messagesCount: Int, _ neuronCellsCount: Int, _ clear: Bool, _ build: Bool)
+add(_ messages: [[Any]], _ n: Int, _ clear: Bool, _ build: Bool)
 ```
 # HOW TO OUTPUT MSGS ON CONSOLE
 ```

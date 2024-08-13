@@ -13,7 +13,7 @@ public class NeuronCell: NSObject, NSSecureCoding {
         coder.encode(cellBody, forKey: "cellBody")
     }
     public required init?(coder: NSCoder) {
-        msg = coder.decodeObject(forKey: "msg") as? [Any] ?? []
+        msg = coder.decodeObject(forKey: "msg") as! [Any]
         nerveEndings = coder.decodeObject(forKey: "nerveEndings") as? [NerveEndingModel] ?? []
         dendrites = coder.decodeObject(forKey: "dendrites") as? [DendriteModel] ?? []
         cellBody = coder.decodeObject(forKey: "cellBody") as! CellBodyModel
@@ -28,16 +28,27 @@ public class NeuronCell: NSObject, NSSecureCoding {
     public var nerveEndings: [NerveEndingModel]
     public func build() {
         for dendrite in self.dendrites {
+            NSLog("begin receiving, please be waiting...")
             dendrite.receive()
-            var i = 0
-            for item in dendrite.deploy?.message ?? [] {
-                self.msg.insert(item, at: i)
-                i += 1
+            NSLog("dendrite ended receiving..., messages \(dendrite.deploy?.message ?? []), count \(dendrite.deploy?.message.count ?? 0), please be waiting...")
+            guard let message = dendrite.deploy?.message else {
+                continue
             }
+            NSLog("begin receiving, please be waiting...")
+            dendrite.deploy?.message = []
+            NSLog("This array was began setting to empty array...")
+            if message.isEmpty {
+                continue
+            }
+            NSLog("This array was began uploading items for getting a array that items were messages...")
+            self.msg = message + msg
+            NSLog("This message was received.")
         }
         for nerveEnding in self.nerveEndings {
             nerveEnding.deploy?.message = self.msg
+            NSLog("begin sending, messages \(nerveEnding.deploy?.message ?? []), count \(nerveEnding.deploy?.message.count ?? 0), please be waiting...")
             nerveEnding.send()
+            NSLog("This message was sent.")
         }
     }
     public static func == (lhs: NeuronCell, rhs: NeuronCell) -> Bool {
@@ -45,9 +56,7 @@ public class NeuronCell: NSObject, NSSecureCoding {
     }
     public init(cellBody: CellBodyModel, dendrites: [DendriteModel], nerveEndings: [NerveEndingModel], msg: [Any]) {
         self.cellBody = cellBody
-        for item in msg {
-            self.msg.append(item)
-        }
+        self.msg.append(contentsOf: msg)
         self.dendrites = dendrites
         self.nerveEndings = nerveEndings
     }
