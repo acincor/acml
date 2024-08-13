@@ -56,6 +56,6 @@ public class NerveEndingModel: NSObject, NSSecureCoding {
         }
     }
     public override var description: String {
-        "<FIRST NERVEENDING \(deploy?.description ?? NSNull.description())>"
+        "<FIRST NERVEENDING \(deploy?.description ?? NSNull().description)>"
     }
 }

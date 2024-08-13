@@ -148,8 +148,26 @@ public func add(_ messages: [[Any]], _ n: Int, _ clear: Bool, _ build: Bool) thr
 # HOW TO GENERATE A BRAIN WITH RANDOM MESSAGES
 ```
 add(_ messages: [[Any]], _ n: Int, _ clear: Bool, _ build: Bool)
+let brain = try rand(2, 3, 2, 3, 9, true)
 ```
-# HOW TO OUTPUT MSGS ON CONSOLE
+# DEFINED A BRAIN FOR EXAMPLE
 ```
-NSLog(brain.msgs)
+let brain = try rand(2, 3, 2, 3, 9, true)
+```
+# BUILD A MODEL
+```
+brain.build { msgs in
+    /*
+    Business Logic:
+    For example, NSLog the built result messages, preview the structures of brain
+    
+    NSLog("the structures of brain \n\(brain.description)")
+    NSLog("non-built-in added msg \n\(msgs.last?.last?.description ?? NSNull().description)")
+    */
+}
+```
+
+# NSLOG THE MESSAGES
+```
+NSLog("built-in msg \n\(brain.msgs)")
 ```

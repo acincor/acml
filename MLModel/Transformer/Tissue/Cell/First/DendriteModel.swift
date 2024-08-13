@@ -67,6 +67,6 @@ public class DendriteModel: NSObject, NSSecureCoding {
         return lhs.deploy == rhs.deploy
     }
     public override var description: String {
-        "<FIRST DENDRITE \(deploy?.description ?? NSNull.description())>"
+        "<FIRST DENDRITE \(deploy?.description ?? NSNull().description)>"
     }
 }

@@ -11,15 +11,11 @@ class expires {
     static let shared = expires()
     var expiresDates = [Date]()
     func example() async throws {
-        /* don't build
-        let brain = try rand(2, 3, 3, true, false)
-        let msgs = brain.msgs
-        NSLog("built-in msg \(msgs)")
-         */
-        let brain = try rand(2, 3, 2, 3, 2, true)
+        let brain = try rand(2, 3, 2, 3, 9, true)
+        NSLog("built-in msg \n\(brain.msgs.last?.last?.description ?? NSNull().description)")
         brain.build { msgs in
-            print("the structures of brain \n\(brain.description)")
-            print("non-built-in added msg \n\(msgs)")
+            NSLog("the structures of brain \n\(brain.description)")
+            NSLog("non-built-in added msg \n\(msgs.last?.last?.description ?? NSNull().description)")
         }
     }
 }
